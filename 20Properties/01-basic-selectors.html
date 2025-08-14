@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Basic Selectors Demo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>📛 Basic Selectors</h1>
+    <p>Panduan lengkap CSS Basic Selectors untuk styling web modern</p>
+  </header>
+  
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">
+        <span>📌</span>
+        <span>Elements</span>
+      </h2>
+      
+      <div class="info-box">
+        <h4>💡 Selector Fundamental</h4>
+        <p>CSS Selectors adalah pola yang digunakan untuk memilih elemen HTML yang ingin diberi styling. Memahami selectors adalah kunci untuk menguasai CSS.</p>
+      </div>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>selectors.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Universal Selector */</span><br>
+            <span class="tag">*</span> {<br>
+            &nbsp;&nbsp;<span class="attr">margin</span>: <span class="string">0</span>;<br>
+            &nbsp;&nbsp;<span class="attr">padding</span>: <span class="string">0</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* Element Selector */</span><br>
+            <span class="tag">h1</span> {<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">#9333ea</span>;<br>
+            &nbsp;&nbsp;<span class="attr">font-size</span>: <span class="string">2.5rem</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* Class Selector */</span><br>
+            <span class="tag">.header</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">linear-gradient(45deg, #9333ea, #a855f7)</span>;<br>
+            &nbsp;&nbsp;<span class="attr">padding</span>: <span class="string">2rem</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* ID Selector */</span><br>
+            <span class="tag">#main-content</span> {<br>
+            &nbsp;&nbsp;<span class="attr">max-width</span>: <span class="string">1200px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">margin</span>: <span class="string">0 auto</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p>
+          <strong>📝 Penjelasan Detail:</strong>
+        </p>
+        <p>
+          • <code>*</code> - <span class="highlight">Universal Selector</span> memilih semua elemen<br>
+          • <code>h1, p, div</code> - <strong>Element Selector</strong> memilih berdasarkan tag HTML<br>
+          • <code>.class-name</code> - <strong>Class Selector</strong> dimulai dengan titik (.)<br>
+          • <code>#id-name</code> - <strong>ID Selector</strong> dimulai dengan hash (#)<br>
+          • <code>h1.title</code> - <strong>Combined Selector</strong> untuk spesifitas lebih tinggi
+        </p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>🛠️</span>
+        <span>Features</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-selectors.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Descendant Selector */</span><br>
+            <span class="tag">.container p</span> {<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">#e0e0e0</span>;<br>
+            &nbsp;&nbsp;<span class="attr">line-height</span>: <span class="string">1.6</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* Child Selector */</span><br>
+            <span class="tag">.nav > li</span> {<br>
+            &nbsp;&nbsp;<span class="attr">display</span>: <span class="string">inline-block</span>;<br>
+            &nbsp;&nbsp;<span class="attr">margin</span>: <span class="string">0 1rem</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* Adjacent Sibling */</span><br>
+            <span class="tag">h2 + p</span> {<br>
+            &nbsp;&nbsp;<span class="attr">margin-top</span>: <span class="string">0</span>;<br>
+            &nbsp;&nbsp;<span class="attr">font-weight</span>: <span class="string">500</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* General Sibling */</span><br>
+            <span class="tag">h2 ~ p</span> {<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">#ccc</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Semua basic selectors didukung penuh oleh semua browser modern (Chrome 1+, Firefox 1+, Safari 1+, IE 7+).</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>📊</span>
+        <span>Basic Tables</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>selector-values.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Priority Table (Specificity) */</span><br>
+            <span class="tag">*</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* 0,0,0,0 */</span><br>
+            <span class="tag">li</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* 0,0,0,1 */</span><br>
+            <span class="tag">.class</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* 0,0,1,0 */</span><br>
+            <span class="tag">#id</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* 0,1,0,0 */</span><br>
+            <span class="tag">style=""</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* 1,0,0,0 */</span><br><br>
+            
+            <span class="comment">/* Common Patterns */</span><br>
+            <span class="tag">.btn.primary</span> &nbsp;&nbsp;&nbsp;<span class="comment">/* Multiple classes */</span><br>
+            <span class="tag">div.container</span> &nbsp;&nbsp;<span class="comment">/* Element + class */</span><br>
+            <span class="tag">#header .logo</span> &nbsp;<span class="comment">/* ID + descendant */</span><br>
+            <span class="tag">ul li:first-child</span> <span class="comment">/* Pseudo-selector */</span>
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p>
+          <strong>📝 Penjelasan Detail:</strong>
+        </p>
+        <p>
+          • <strong>Specificity</strong> menentukan prioritas selector yang akan diterapkan<br>
+          • Semakin tinggi nilai specificity, semakin tinggi prioritasnya<br>
+          • <span class="highlight">!important</span> akan override semua specificity<br>
+          • Best practice: hindari penggunaan !important yang berlebihan
+        </p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>🚀</span>
+        <span>Advanced Table</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>pseudo-selectors.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Pseudo-classes */</span><br>
+            <span class="tag">a:hover</span> {<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">#a855f7</span>;<br>
+            &nbsp;&nbsp;<span class="attr">transition</span>: <span class="string">color 0.3s ease</span>;<br>
+            }<br><br>
+            
+            <span class="tag">input:focus</span> {<br>
+            &nbsp;&nbsp;<span class="attr">outline</span>: <span class="string">2px solid #9333ea</span>;<br>
+            &nbsp;&nbsp;<span class="attr">border-color</span>: <span class="string">transparent</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* Structural pseudo-classes */</span><br>
+            <span class="tag">li:nth-child(odd)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">rgba(147, 51, 234, 0.1)</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* Pseudo-elements */</span><br>
+            <span class="tag">.card::before</span> {<br>
+            &nbsp;&nbsp;<span class="attr">content</span>: <span class="string">""</span>;<br>
+            &nbsp;&nbsp;<span class="attr">position</span>: <span class="string">absolute</span>;<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">linear-gradient(45deg, #9333ea, #a855f7)</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Pseudo-selectors: Chrome 1+, Firefox 1+, Safari 1+, IE 8+. Pseudo-elements dengan :: syntax: Chrome 1+, Firefox 1.5+, Safari 1+, IE 9+.</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>💡</span>
+        <span>Pro Tips</span>
+      </h2>
+      
+      <div class="info-box">
+        <h4>🎯 Best Practices</h4>
+        <p>Gunakan class selectors untuk styling utama, hindari over-nesting (max 3 levels), dan prioritaskan readability over cleverness.</p>
+      </div>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>best-practices.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* ✅ Good - Readable and maintainable */</span><br>
+            <span class="tag">.btn-primary</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">#9333ea</span>;<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">white</span>;<br>
+            }<br><br>
+            
+            <span class="tag">.card .title</span> {<br>
+            &nbsp;&nbsp;<span class="attr">font-size</span>: <span class="string">1.5rem</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* ❌ Avoid - Too specific */</span><br>
+            <span class="tag">div.container > section.main > article.post > h2.title</span> {<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">#9333ea</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* ❌ Avoid - Over-qualified */</span><br>
+            <span class="tag">div#header div.container ul.nav li.item a.link</span> {<br>
+            &nbsp;&nbsp;<span class="attr">text-decoration</span>: <span class="string">none</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p>
+          <strong>📝 Penjelasan Detail:</strong>
+        </p>
+        <p>
+          • <strong>Keep it simple</strong> - gunakan selector sesederhana mungkin<br>
+          • <strong>Avoid deep nesting</strong> - maksimal 3 level untuk maintainability<br>
+          • <strong>Use meaningful names</strong> - class names harus deskriptif<br>
+          • <strong>Follow BEM methodology</strong> - Block__Element--Modifier pattern<br>
+          • <strong>Performance matters</strong> - ID dan class selectors paling cepat
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

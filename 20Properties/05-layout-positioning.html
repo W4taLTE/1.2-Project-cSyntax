@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Layout & Positioning</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>📛 Layout & Positioning</h1>
+    <p>Panduan lengkap CSS Layout & Positioning untuk desain web modern</p>
+  </header>
+  
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">
+        <span>📌</span>
+        <span>Elements</span>
+      </h2>
+      
+      <div class="info-box">
+        <h4>💡 Fundamental Properties</h4>
+        <p>CSS Layout & Positioning mengontrol bagaimana elemen ditempatkan dan diatur pada halaman web. Memahami ini penting untuk membuat desain yang responsif.</p>
+      </div>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>layout.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Display Properties */</span><br>
+            <span class="tag">.box</span> {<br>
+            &nbsp;&nbsp;<span class="attr">display</span>: <span class="string">block</span>; <span class="comment">/* or inline, inline-block, none */</span><br>
+            &nbsp;&nbsp;<span class="attr">visibility</span>: <span class="string">visible</span>; <span class="comment">/* or hidden */</span><br>
+            }<br><br>
+            
+            <span class="comment">/* Box Model */</span><br>
+            <span class="tag">.element</span> {<br>
+            &nbsp;&nbsp;<span class="attr">width</span>: <span class="string">300px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">height</span>: <span class="string">200px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">padding</span>: <span class="string">20px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">border</span>: <span class="string">2px solid #9333ea</span>;<br>
+            &nbsp;&nbsp;<span class="attr">margin</span>: <span class="string">10px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">box-sizing</span>: <span class="string">border-box</span>; <span class="comment">/* or content-box */</span><br>
+            }<br><br>
+            
+            <span class="comment">/* Positioning */</span><br>
+            <span class="tag">.absolute-box</span> {<br>
+            &nbsp;&nbsp;<span class="attr">position</span>: <span class="string">absolute</span>; <span class="comment">/* or relative, fixed, sticky */</span><br>
+            &nbsp;&nbsp;<span class="attr">top</span>: <span class="string">20px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">left</span>: <span class="string">30px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">z-index</span>: <span class="string">10</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>display</code> - <span class="highlight">menentukan bagaimana elemen ditampilkan</span><br>
+          • <code>box-model</code> - <strong>mengatur dimensi dan spasi</strong> (width, height, padding, margin)<br>
+          • <code>position</code> - <strong>mengontrol posisi elemen</strong> (static, relative, absolute, fixed, sticky)<br>
+          • <code>z-index</code> - <strong>mengatur tumpukan elemen</strong> (hanya bekerja dengan position non-static)<br>
+          • <code>box-sizing</code> - <strong>mengontrol perhitungan dimensi</strong> (border-box lebih intuitif)
+        </p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>🛠️</span>
+        <span>Features</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>layout-features.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Flexbox Layout */</span><br>
+            <span class="tag">.flex-container</span> {<br>
+            &nbsp;&nbsp;<span class="attr">display</span>: <span class="string">flex</span>;<br>
+            &nbsp;&nbsp;<span class="attr">flex-direction</span>: <span class="string">row</span>; <span class="comment">/* or column */</span><br>
+            &nbsp;&nbsp;<span class="attr">justify-content</span>: <span class="string">center</span>; <span class="comment">/* main axis */</span><br>
+            &nbsp;&nbsp;<span class="attr">align-items</span>: <span class="string">center</span>; <span class="comment">/* cross axis */</span><br>
+            &nbsp;&nbsp;<span class="attr">gap</span>: <span class="string">1rem</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* CSS Grid Layout */</span><br>
+            <span class="tag">.grid-container</span> {<br>
+            &nbsp;&nbsp;<span class="attr">display</span>: <span class="string">grid</span>;<br>
+            &nbsp;&nbsp;<span class="attr">grid-template-columns</span>: <span class="string">1fr 2fr 1fr</span>;<br>
+            &nbsp;&nbsp;<span class="attr">grid-template-rows</span>: <span class="string">auto 1fr auto</span>;<br>
+            &nbsp;&nbsp;<span class="attr">grid-gap</span>: <span class="string">20px</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* Multi-column Layout */</span><br>
+            <span class="tag">.multi-column</span> {<br>
+            &nbsp;&nbsp;<span class="attr">column-count</span>: <span class="string">3</span>;<br>
+            &nbsp;&nbsp;<span class="attr">column-gap</span>: <span class="string">2rem</span>;<br>
+            &nbsp;&nbsp;<span class="attr">column-rule</span>: <span class="string">1px solid #9333ea</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Flexbox: Chrome 29+, Firefox 28+, Safari 9+, IE 11+. CSS Grid: Chrome 57+, Firefox 52+, Safari 10.1+, Edge 16+. Multi-column: Chrome 1+, Firefox 1.5+, Safari 3+, IE 10+.</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>📊</span>
+        <span>Basic Tables</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>layout-values.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Position Values */</span><br>
+            <span class="tag">static</span> &nbsp;&nbsp;<span class="comment">/* Default */</span><br>
+            <span class="tag">relative</span> <span class="comment">/* Relative to normal position */</span><br>
+            <span class="tag">absolute</span> <span class="comment">/* Relative to nearest positioned ancestor */</span><br>
+            <span class="tag">fixed</span> &nbsp;&nbsp;&nbsp;<span class="comment">/* Relative to viewport */</span><br>
+            <span class="tag">sticky</span> &nbsp;<span class="comment">/* Hybrid of relative and fixed */</span><br><br>
+            
+            <span class="comment">/* Display Values */</span><br>
+            <span class="tag">block</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Takes full width */</span><br>
+            <span class="tag">inline</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Flows like text */</span><br>
+            <span class="tag">inline-block</span> <span class="comment">/* Inline with block properties */</span><br>
+            <span class="tag">flex</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Flex container */</span><br>
+            <span class="tag">grid</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Grid container */</span><br>
+            <span class="tag">none</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Removes from flow */</span><br><br>
+            
+            <span class="comment">/* Float Values */</span><br>
+            <span class="tag">left</span> &nbsp;&nbsp;&nbsp;<span class="comment">/* Floats element left */</span><br>
+            <span class="tag">right</span> &nbsp;<span class="comment">/* Floats element right */</span><br>
+            <span class="tag">none</span> &nbsp;&nbsp;<span class="comment">/* Default (no float) */</span><br>
+            <span class="tag">inherit</span> <span class="comment">/* Inherits from parent */</span>
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Position values</strong> mengontrol jenis positioning yang digunakan<br>
+          • <strong>Display values</strong> menentukan konteks layout untuk elemen<br>
+          • <span class="highlight">Flexbox</span> ideal untuk 1D layouts (baris atau kolom)<br>
+          • <strong>Grid</strong> dirancang untuk 2D layouts (baris dan kolom)<br>
+          • <strong>Float</strong> masih berguna untuk wrapping text di sekitar gambar
+        </p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>🚀</span>
+        <span>Advanced Table</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-layout.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Advanced Grid */</span><br>
+            <span class="tag">.responsive-grid</span> {<br>
+            &nbsp;&nbsp;<span class="attr">display</span>: <span class="string">grid</span>;<br>
+            &nbsp;&nbsp;<span class="attr">grid-template-columns</span>: <span class="string">repeat(auto-fill, minmax(250px, 1fr))</span>;<br>
+            &nbsp;&nbsp;<span class="attr">grid-auto-rows</span>: <span class="string">minmax(100px, auto)</span>;<br>
+            &nbsp;&nbsp;<span class="attr">grid-template-areas</span>: <span class="string">"header header" "sidebar main" "footer footer"</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* Flexbox Alignment */</span><br>
+            <span class="tag">.flex-alignment</span> {<br>
+            &nbsp;&nbsp;<span class="attr">display</span>: <span class="string">flex</span>;<br>
+            &nbsp;&nbsp;<span class="attr">align-content</span>: <span class="string">space-between</span>; <span class="comment">/* multi-line */</span><br>
+            &nbsp;&nbsp;<span class="attr">align-self</span>: <span class="string">flex-end</span>; <span class="comment">/* individual items */</span><br>
+            &nbsp;&nbsp;<span class="attr">order</span>: <span class="string">2</span>; <span class="comment">/* change visual order */</span><br>
+            }<br><br>
+            
+            <span class="comment">/* CSS Shapes */</span><br>
+            <span class="tag">.text-wrap</span> {<br>
+            &nbsp;&nbsp;<span class="attr">shape-outside</span>: <span class="string">circle(50%)</span>;<br>
+            &nbsp;&nbsp;<span class="attr">float</span>: <span class="string">left</span>;<br>
+            &nbsp;&nbsp;<span class="attr">width</span>: <span class="string">200px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">height</span>: <span class="string">200px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">clip-path</span>: <span class="string">polygon(0 0, 100% 0, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0 75%)</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Advanced Grid: Chrome 57+, Firefox 52+, Safari 10.1+, Edge 16+. Flexbox alignment: Chrome 29+, Firefox 28+, Safari 9+, IE 11+. CSS Shapes: Chrome 37+, Firefox 62+, Safari 10.1+, Edge 79+.</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>💡</span>
+        <span>Pro Tips</span>
+      </h2>
+      
+      <div class="info-box">
+        <h4>🎯 Best Practices</h4>
+        <p>Gunakan Flexbox untuk komponen kecil dan Grid untuk layout halaman. Hindari float untuk layout utama. Manfaatkan CSS variables untuk konsistensi spacing.</p>
+      </div>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>layout-tips.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* ✅ Good - Modern layout techniques */</span><br>
+            <span class="tag">.responsive-card</span> {<br>
+            &nbsp;&nbsp;<span class="attr">display</span>: <span class="string">grid</span>;<br>
+            &nbsp;&nbsp;<span class="attr">grid-template-columns</span>: <span class="string">repeat(auto-fit, minmax(300px, 1fr))</span>;<br>
+            &nbsp;&nbsp;<span class="attr">gap</span>: <span class="string">1.5rem</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* ✅ Good - Consistent spacing */</span><br>
+            <span class="tag">:root</span> {<br>
+            &nbsp;&nbsp;<span class="attr">--spacing-unit</span>: <span class="string">1rem</span>;<br>
+            }<br>
+            <span class="tag">.container</span> {<br>
+            &nbsp;&nbsp;<span class="attr">padding</span>: <span class="string">calc(var(--spacing-unit) * 2)</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* ❌ Avoid - Old float layouts */</span><br>
+            <span class="tag">.old-layout</span> {<br>
+            &nbsp;&nbsp;<span class="attr">float</span>: <span class="string">left</span>;<br>
+            &nbsp;&nbsp;<span class="attr">width</span>: <span class="string">30%</span>;<br>
+            &nbsp;&nbsp;<span class="attr">margin-right</span>: <span class="string">3%</span>;<br>
+            &nbsp;&nbsp;<span class="attr">clear</span>: <span class="string">both</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* ❌ Avoid - Overuse of position absolute */</span><br>
+            <span class="tag">.over-absolute</span> {<br>
+            &nbsp;&nbsp;<span class="attr">position</span>: <span class="string">absolute</span>;<br>
+            &nbsp;&nbsp;<span class="attr">top</span>: <span class="string">0</span>;<br>
+            &nbsp;&nbsp;<span class="attr">left</span>: <span class="string">0</span>;<br>
+            &nbsp;&nbsp;<span class="attr">right</span>: <span class="string">0</span>;<br>
+            &nbsp;&nbsp;<span class="attr">bottom</span>: <span class="string">0</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Mobile-first</strong> - mulai dari layout mobile lalu enhance untuk desktop<br>
+          • <strong>CSS Grid</strong> untuk layout utama halaman<br>
+          • <strong>Flexbox</strong> untuk komponen dan alignment<br>
+          • <span class="highlight">Gap property</span> lebih baik dari margin untuk spasi konsisten<br>
+          • <strong>CSS Variables</strong> untuk nilai spacing yang konsisten<br>
+          • <strong>Minimal position absolute</strong> - gunakan hanya ketika benar-benar perlu
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

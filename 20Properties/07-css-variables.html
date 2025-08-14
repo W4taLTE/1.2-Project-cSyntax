@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Variables Demo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>📛 CSS Variables</h1>
+    <p>Panduan lengkap CSS Custom Properties (Variables) untuk styling web modern</p>
+  </header>
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">
+        <span>📌</span>
+        <span>Elements</span>
+      </h2>
+      <div class="info-box">
+        <h4>💡 Fundamental Variables</h4>
+        <p>CSS Variables (Custom Properties) memungkinkan Anda menyimpan nilai yang dapat digunakan kembali dalam stylesheet Anda, membuat pengelolaan desain lebih konsisten dan mudah di-maintain.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>variables.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Deklarasi variabel global */</span><br>
+            <span class="tag">:root</span> {<br>
+            &nbsp;&nbsp;<span class="attr">--primary-color</span>: <span class="string">#9333ea</span>;<br>
+            &nbsp;&nbsp;<span class="attr">--secondary-color</span>: <span class="string">#a855f7</span>;<br>
+            &nbsp;&nbsp;<span class="attr">--text-color</span>: <span class="string">#333</span>;<br>
+            &nbsp;&nbsp;<span class="attr">--spacing-unit</span>: <span class="string">1rem</span>;<br>
+            }<br><br>
+            <span class="comment">/* Menggunakan variabel */</span><br>
+            <span class="tag">.header</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">var(--primary-color)</span>;<br>
+            &nbsp;&nbsp;<span class="attr">padding</span>: <span class="string">calc(var(--spacing-unit) * 2)</span>;<br>
+            }<br><br>
+            <span class="comment">/* Variabel dengan fallback */</span><br>
+            <span class="tag">.btn</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">var(--btn-color, var(--primary-color))</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>:root</code> - <span class="highlight">Scope global</span> untuk variabel CSS<br>
+          • <code>--variable-name</code> - <strong>Sintaks deklarasi</strong> variabel CSS<br>
+          • <code>var()</code> - <strong>Fungsi</strong> untuk menggunakan variabel<br>
+          • <code>calc()</code> - <strong>Perhitungan</strong> dengan variabel<br>
+          • <code>var(--var, fallback)</code> - <strong>Fallback value</strong> jika variabel tidak ada
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🛠️</span>
+        <span>Features</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-variables.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Variabel dalam media queries */</span><br>
+            <span class="tag">:root</span> {<br>
+            &nbsp;&nbsp;<span class="attr">--base-font</span>: <span class="string">1rem</span>;<br>
+            }<br><br>
+            <span class="tag">@media (min-width: 768px)</span> {<br>
+            &nbsp;&nbsp;<span class="tag">:root</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">--base-font</span>: <span class="string">1.2rem</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br><br>
+            <span class="comment">/* Variabel dalam pseudo-class */</span><br>
+            <span class="tag">button:hover</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">var(--hover-color)</span>;<br>
+            }<br><br>
+            <span class="comment">/* Variabel untuk animasi */</span><br>
+            <span class="tag">.box</span> {<br>
+            &nbsp;&nbsp;<span class="attr">--scale</span>: <span class="string">1</span>;<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">scale(var(--scale))</span>;<br>
+            &nbsp;&nbsp;<span class="attr">transition</span>: <span class="string">transform 0.3s</span>;<br>
+            }<br>
+            <span class="tag">.box:hover</span> {<br>
+            &nbsp;&nbsp;<span class="attr">--scale</span>: <span class="string">1.1</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>CSS Variables didukung di semua browser modern (Chrome 49+, Firefox 31+, Safari 9.1+, Edge 15+). IE11 tidak mendukung.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>📊</span>
+        <span>Basic Tables</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>variables-values.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Common Variable Types */</span><br>
+            <span class="tag">--color-primary</span> &nbsp;&nbsp;<span class="comment">/* Warna utama */</span><br>
+            <span class="tag">--spacing-small</span> &nbsp;<span class="comment">/* Jarak kecil (8px) */</span><br>
+            <span class="tag">--font-size-base</span> <span class="comment">/* Ukuran font dasar (1rem) */</span><br>
+            <span class="tag">--border-radius</span> &nbsp;<span class="comment">/* Radius border (4px) */</span><br>
+            <span class="tag">--transition-time</span> <span class="comment">/* Durasi transisi (0.3s) */</span><br><br>
+            <span class="comment">/* Naming Convention */</span><br>
+            <span class="tag">--component-name-property</span> <span class="comment">/* BEM-style */</span><br>
+            <span class="tag">--theme-color-primary</span> &nbsp;<span class="comment">/* Berdasarkan tema */</span><br>
+            <span class="tag">--state-hover-color</span> &nbsp;<span class="comment">/* Berdasarkan state */</span>
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Color Variables</strong> - Untuk warna utama, sekunder, dll.<br>
+          • <strong>Spacing Variables</strong> - Untuk padding, margin, dan gap yang konsisten.<br>
+          • <strong>Typography Variables</strong> - Untuk ukuran font, line-height, dll.<br>
+          • <strong>Effect Variables</strong> - Untuk shadow, transition, dll.<br>
+          • <span class="highlight">Naming Convention</span> yang baik penting untuk maintainability
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🚀</span>
+        <span>Advanced Table</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-variables.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Variabel dalam JavaScript */</span><br>
+            <span class="tag">element.style.setProperty('--primary-color', '#9333ea')</span>;<br><br>
+            <span class="comment">/* Variabel untuk dark mode */</span><br>
+            <span class="tag">:root</span> {<br>
+            &nbsp;&nbsp;<span class="attr">--bg-color</span>: <span class="string">white</span>;<br>
+            &nbsp;&nbsp;<span class="attr">--text-color</span>: <span class="string">black</span>;<br>
+            }<br>
+            <span class="tag">.dark-mode</span> {<br>
+            &nbsp;&nbsp;<span class="attr">--bg-color</span>: <span class="string">#222</span>;<br>
+            &nbsp;&nbsp;<span class="attr">--text-color</span>: <span class="string">white</span>;<br>
+            }<br><br>
+            <span class="comment">/* Variabel untuk theming */</span><br>
+            <span class="tag">.theme-purple</span> {<br>
+            &nbsp;&nbsp;<span class="attr">--primary</span>: <span class="string">#9333ea</span>;<br>
+            &nbsp;&nbsp;<span class="attr">--secondary</span>: <span class="string">#a855f7</span>;<br>
+            }<br>
+            <span class="tag">.theme-blue</span> {<br>
+            &nbsp;&nbsp;<span class="attr">--primary</span>: <span class="string">#2563eb</span>;<br>
+            &nbsp;&nbsp;<span class="attr">--secondary</span>: <span class="string">#3b82f6</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Manipulasi variabel CSS dengan JavaScript didukung di semua browser yang mendukung CSS Variables. Untuk kompatibilitas maksimal, gunakan polyfill untuk IE11 jika diperlukan.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>💡</span>
+        <span>Pro Tips</span>
+      </h2>
+      <div class="info-box">
+        <h4>🎯 Best Practices</h4>
+        <p>Gunakan CSS Variables untuk membuat sistem desain yang konsisten, mudah di-maintain, dan dapat dikustomisasi.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>best-practices.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* ✅ Good - Organized and reusable */</span><br>
+            <span class="tag">:root</span> {<br>
+            &nbsp;&nbsp;<span class="comment">/* Colors */</span><br>
+            &nbsp;&nbsp;<span class="attr">--color-primary</span>: <span class="string">#9333ea</span>;<br>
+            &nbsp;&nbsp;<span class="attr">--color-secondary</span>: <span class="string">#a855f7</span>;<br><br>
+            &nbsp;&nbsp;<span class="comment">/* Spacing */</span><br>
+            &nbsp;&nbsp;<span class="attr">--space-sm</span>: <span class="string">0.5rem</span>;<br>
+            &nbsp;&nbsp;<span class="attr">--space-md</span>: <span class="string">1rem</span>;<br>
+            }<br><br>
+            <span class="comment">/* ❌ Avoid - Unorganized and hard to maintain */</span><br>
+            <span class="tag">.header</span> {<br>
+            &nbsp;&nbsp;<span class="attr">--color1</span>: <span class="string">#9333ea</span>;<br>
+            &nbsp;&nbsp;<span class="attr">--space1</span>: <span class="string">10px</span>;<br>
+            }<br>
+            <span class="tag">.footer</span> {<br>
+            &nbsp;&nbsp;<span class="attr">--color2</span>: <span class="string">#a855f7</span>;<br>
+            &nbsp;&nbsp;<span class="attr">--space2</span>: <span class="string">15px</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Organize by category</strong> - Kelompokkan variabel berdasarkan jenis (warna, spacing, dll)<br>
+          • <strong>Use semantic names</strong> - Nama yang deskriptif (--color-primary bukan --color1)<br>
+          • <strong>Define globally first</span> - Mulai dengan :root untuk variabel global<br>
+            • <strong>Scope appropriately</strong> - Gunakan scope komponen untuk variabel spesifik<br>
+            • <strong>Document your variables</strong> - Tambahkan komentar untuk penjelasan
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

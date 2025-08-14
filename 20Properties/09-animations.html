@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animations Demo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>📛 CSS Animations</h1>
+    <p>Panduan lengkap CSS Animations untuk efek bergerak yang kompleks</p>
+  </header>
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">
+        <span>📌</span>
+        <span>Elements</span>
+      </h2>
+      <div class="info-box">
+        <h4>💡 Animation Fundamentals</h4>
+        <p>CSS Animations memungkinkan Anda membuat animasi kompleks dengan menentukan keyframe dan properti animasi.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>animations.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Definisi keyframes */</span><br>
+            <span class="tag">@keyframes slideIn</span> {<br>
+            &nbsp;&nbsp;<span class="attr">from</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">translateX(-100%)</span>;<br>
+            &nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;<span class="attr">to</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">translateX(0)</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br><br>
+            <span class="comment">/* Penerapan animasi */</span><br>
+            <span class="tag">.box</span> {<br>
+            &nbsp;&nbsp;<span class="attr">animation</span>: <span class="string">slideIn 0.5s ease-out forwards</span>;<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">#9333ea</span>;<br>
+            }<br><br>
+            <span class="comment">/* Animasi multiple keyframes */</span><br>
+            <span class="tag">@keyframes bounce</span> {<br>
+            &nbsp;&nbsp;<span class="attr">0%</span>, <span class="attr">100%</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">translateY(0)</span>;<br>
+            &nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;<span class="attr">50%</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">translateY(-20px)</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>@keyframes</code> - <span class="highlight">Mendefinisikan</span> tahapan animasi<br>
+          • <code>animation-name</code> - <strong>Nama</strong> keyframe yang akan digunakan<br>
+          • <code>animation-duration</code> - <strong>Durasi</strong> animasi (contoh: 2s)<br>
+          • <code>animation-timing-function</code> - <strong>Fungsi waktu</strong> (ease, linear, etc)<br>
+          • <code>animation-iteration-count</code> - <strong>Jumlah pengulangan</strong> (infinite untuk terus menerus)
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🛠️</span>
+        <span>Features</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-animations.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Animasi dengan delay dan fill-mode */</span><br>
+            <span class="tag">.item</span> {<br>
+            &nbsp;&nbsp;<span class="attr">animation</span>: <span class="string">fadeIn 0.5s ease 0.3s both</span>;<br>
+            }<br><br>
+            <span class="comment">/* Animasi berurutan */</span><br>
+            <span class="tag">.card:nth-child(1)</span> { <span class="attr">animation-delay</span>: <span class="string">0.1s</span>; }<br>
+            <span class="tag">.card:nth-child(2)</span> { <span class="attr">animation-delay</span>: <span class="string">0.2s</span>; }<br>
+            <span class="tag">.card:nth-child(3)</span> { <span class="attr">animation-delay</span>: <span class="string">0.3s</span>; }<br><br>
+            <span class="comment">/* Animasi 3D */</span><br>
+            <span class="tag">@keyframes flip</span> {<br>
+            &nbsp;&nbsp;<span class="attr">0%</span> { <span class="attr">transform</span>: <span class="string">rotateY(0)</span>; }<br>
+            &nbsp;&nbsp;<span class="attr">100%</span> { <span class="attr">transform</span>: <span class="string">rotateY(180deg)</span>; }<br>
+            }<br><br>
+            <span class="tag">.flip-card</span> {<br>
+            &nbsp;&nbsp;<span class="attr">animation</span>: <span class="string">flip 0.6s ease-in-out forwards</span>;<br>
+            &nbsp;&nbsp;<span class="attr">transform-style</span>: <span class="string">preserve-3d</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>CSS Animations didukung di semua browser modern (Chrome 43+, Firefox 16+, Safari 9+, Edge 12+). Untuk IE10+, gunakan prefix -ms-.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>📊</span>
+        <span>Basic Tables</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>animation-values.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Animation Properties */</span><br>
+            <span class="tag">animation-name</span> &nbsp;&nbsp;<span class="comment">/* Nama keyframe */</span><br>
+            <span class="tag">animation-duration</span> <span class="comment">/* Durasi (1s, 200ms) */</span><br>
+            <span class="tag">animation-timing-function</span> <span class="comment">/* Fungsi waktu */</span><br>
+            <span class="tag">animation-delay</span> &nbsp;&nbsp;<span class="comment">/* Penundaan */</span><br>
+            <span class="tag">animation-iteration-count</span> <span class="comment">/* Jumlah */</span><br>
+            <span class="tag">animation-direction</span> <span class="comment">/* Arah */</span><br>
+            <span class="tag">animation-fill-mode</span> <span class="comment">/* Fill mode */</span><br><br>
+            <span class="comment">/* Timing Functions */</span><br>
+            <span class="tag">ease</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Default */</span><br>
+            <span class="tag">linear</span> &nbsp;&nbsp;<span class="comment">/* Konstan */</span><br>
+            <span class="tag">ease-in</span> &nbsp;<span class="comment">/* Slow start */</span><br>
+            <span class="tag">ease-out</span> <span class="comment">/* Slow end */</span><br>
+            <span class="tag">cubic-bezier()</span> <span class="comment">/* Kustom */</span>
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Fill modes</strong> - Mengontrol state sebelum/sesudah animasi<br>
+          • <strong>Iteration count</strong> - Dapat berupa angka atau 'infinite'<br>
+          • <span class="highlight">Direction</span> - normal, reverse, alternate, alternate-reverse<br>
+          • <span class="highlight">Play state</span> - running atau paused<br>
+          • Nilai durasi umum: 300-500ms untuk interaksi, 1-3s untuk animasi panjang
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🚀</span>
+        <span>Advanced Table</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-animations.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Animasi dengan JavaScript */</span><br>
+            <span class="tag">element.style.animation = 'slideIn 0.5s forwards'</span>;<br><br>
+            <span class="comment">/* Animation events */</span><br>
+            <span class="tag">element.addEventListener('animationend', () => {</span><br>
+            &nbsp;&nbsp;<span class="tag">console.log('Animation ended')</span>;<br>
+            <span class="tag">})</span>;<br><br>
+            <span class="comment">/* Animasi dengan CSS Variables */</span><br>
+            <span class="tag">@keyframes dynamic</span> {<br>
+            &nbsp;&nbsp;<span class="attr">to</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">translateX(var(--distance))</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br><br>
+            <span class="comment">/* Animasi step */</span><br>
+            <span class="tag">@keyframes ticker</span> {<br>
+            &nbsp;&nbsp;<span class="attr">to</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">translateX(-100%)</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br>
+            <span class="tag">.ticker</span> {<br>
+            &nbsp;&nbsp;<span class="attr">animation</span>: <span class="string">ticker 10s linear infinite</span>;<br>
+            &nbsp;&nbsp;<span class="attr">animation-timing-function</span>: <span class="string">steps(10)</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Animation events didukung di semua browser modern. CSS Variables dalam animasi memerlukan dukungan untuk kedua fitur tersebut.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>💡</span>
+        <span>Pro Tips</span>
+      </h2>
+      <div class="info-box">
+        <h4>🎯 Best Practices</h4>
+        <p>Gunakan animasi dengan bijak untuk meningkatkan pengalaman pengguna tanpa mengorbankan performa.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>best-practices.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* ✅ Good - Performant properties */</span><br>
+            <span class="tag">@keyframes goodExample</span> {<br>
+            &nbsp;&nbsp;<span class="attr">to</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">translateX(100px) scale(1.2)</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">opacity</span>: <span class="string">0.8</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br><br>
+            <span class="comment">/* ❌ Avoid - Expensive properties */</span><br>
+            <span class="tag">@keyframes badExample</span> {<br>
+            &nbsp;&nbsp;<span class="attr">to</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">width</span>: <span class="string">500px</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">margin-left</span>: <span class="string">100px</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br><br>
+            <span class="comment">/* ✅ Good - Prefers reduced motion */</span><br>
+            <span class="tag">@media (prefers-reduced-motion: reduce)</span> {<br>
+            &nbsp;&nbsp;<span class="tag">*</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">animation</span>: <span class="string">none !important</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">transition</span>: <span class="string">none !important</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Gunakan transform/opacity</strong> - Properti ini paling efisien untuk dianimasikan<br>
+          • <strong>Hindari animasi layout properties</strong> - width, height, margin menyebabkan reflow<br>
+          • <strong>Gunakan will-change</strong> - Untuk memberi tahu browser properti yang akan berubah<br>
+          • <strong>Hormati prefers-reduced-motion</strong> - Beberapa pengguna sensitif terhadap animasi<br>
+          • <strong>Batasi animasi simultan</strong> - Terlalu banyak animasi membebani performa
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transforms Demo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>📛 CSS Transforms</h1>
+    <p>Panduan lengkap CSS Transforms untuk manipulasi elemen 2D/3D</p>
+  </header>
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">
+        <span>📌</span>
+        <span>Elements</span>
+      </h2>
+      <div class="info-box">
+        <h4>💡 Transform Fundamentals</h4>
+        <p>CSS Transforms memungkinkan Anda memodifikasi space koordinat dari model visual CSS, memungkinkan rotasi, skewing, scaling, dan translasi elemen.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>transforms.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Basic 2D Transform */</span><br>
+            <span class="tag">.box</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">rotate(45deg)</span>;<br>
+            }<br><br>
+            <span class="comment">/* Multiple Transforms */</span><br>
+            <span class="tag">.card</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">translateX(50px) scale(1.2)</span>;<br>
+            }<br><br>
+            <span class="comment">/* 3D Transform */</span><br>
+            <span class="tag">.cube</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">rotateX(60deg) rotateY(30deg)</span>;<br>
+            &nbsp;&nbsp;<span class="attr">transform-style</span>: <span class="string">preserve-3d</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>transform</code> - Memodifikasi space koordinat elemen<br>
+          • <code>transform-origin</code> - Mengubah titik origin transformasi<br>
+          • <code>transform-style</code> - Menentukan bagaimana elemen nested di-render dalam 3D space<br>
+          • <code>perspective</code> - Menentukan jarak antara user dan z=0 plane
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🛠️</span>
+        <span>Features</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-transforms.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Translate */</span><br>
+            <span class="tag">.move</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">translate(50px, 20px)</span>;<br>
+            }<br><br>
+            <span class="comment">/* Scale with Origin */</span><br>
+            <span class="tag">.zoom</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">scale(1.5)</span>;<br>
+            &nbsp;&nbsp;<span class="attr">transform-origin</span>: <span class="string">top left</span>;<br>
+            }<br><br>
+            <span class="comment">/* 3D Rotation */</span><br>
+            <span class="tag">.rotate-3d</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">rotate3d(1, 1, 0, 45deg)</span>;<br>
+            &nbsp;&nbsp;<span class="attr">perspective</span>: <span class="string">500px</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>2D Transforms: Chrome 4+, Firefox 3.5+, Safari 3.1+, IE 9+. 3D Transforms: Chrome 12+, Firefox 10+, Safari 4+, IE 10+.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>📊</span>
+        <span>Basic Tables</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>transform-values.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Common Transform Functions */</span><br>
+            <span class="tag">.translate</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">translate(50px, 20px)</span>;<br>
+            }<br><br>
+            <span class="tag">.rotate</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">rotate(30deg)</span>;<br>
+            }<br><br>
+            <span class="tag">.scale</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">scale(1.2, 0.8)</span>;<br>
+            }<br><br>
+            <span class="tag">.skew</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">skew(20deg, 10deg)</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>translate(x,y)</code> - Memindahkan elemen sepanjang sumbu X dan Y<br>
+          • <code>rotate(angle)</code> - Memutar elemen sebesar sudut tertentu<br>
+          • <code>scale(x,y)</code> - Mengubah ukuran elemen (1 = ukuran normal)<br>
+          • <code>skew(x-angle,y-angle)</code> - Membuat elemen miring/miring
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🚀</span>
+        <span>Advanced Table</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>3d-transforms.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* 3D Transform Functions */</span><br>
+            <span class="tag">.translate-3d</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">translate3d(50px, 20px, 100px)</span>;<br>
+            }<br><br>
+            <span class="tag">.rotate-3d</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">rotate3d(1, 1, 1, 45deg)</span>;<br>
+            }<br><br>
+            <span class="tag">.scale-3d</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">scale3d(1.2, 1.2, 1.5)</span>;<br>
+            }<br><br>
+            <span class="tag">.perspective</span> {<br>
+            &nbsp;&nbsp;<span class="attr">perspective</span>: <span class="string">1000px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">rotateY(45deg)</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>3D Transforms: Chrome 12+, Firefox 10+, Safari 4+, IE 10+. Requires vendor prefixes (-webkit-, -moz-) for full support.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>💡</span>
+        <span>Pro Tips</span>
+      </h2>
+      <div class="info-box">
+        <h4>🎯 Best Practices</h4>
+        <p>Gunakan transforms untuk animasi performa tinggi dan efek visual yang smooth tanpa mempengaruhi layout.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>best-practices.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* ✅ Good - Hardware accelerated */</span><br>
+            <span class="tag">.animate</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transition</span>: <span class="string">transform 0.3s ease</span>;<br>
+            }<br>
+            <span class="tag">.animate:hover</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">scale(1.1)</span>;<br>
+            }<br><br>
+            <span class="comment">/* ❌ Avoid - Overusing 3D transforms */</span><br>
+            <span class="tag">.over-3d</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">rotateX(45deg) rotateY(45deg) rotateZ(45deg)</span>;<br>
+            &nbsp;&nbsp;<span class="attr">perspective</span>: <span class="string">200px</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Gunakan untuk animasi</strong> - Transforms di-handle oleh GPU untuk performa lebih baik<br>
+          • <strong>Hindari transform berlebihan</strong> - Terlalu banyak transform kompleks bisa mengurangi performa<br>
+          • <strong>Gunakan will-change</strong> - Beri tahu browser elemen mana yang akan di-transform<br>
+          • <strong>Perhatikan transform-origin</span> - Titik origin mempengaruhi hasil transformasi
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

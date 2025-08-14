@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Typography Properties</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>📛 Typography Properties</h1>
+        <p>Panduan lengkap CSS Typography untuk styling teks web modern</p>
+    </header>
+    
+    <div class="container">
+        <section class="section">
+            <h2 class="section-title">
+                <span>📌</span>
+                <span>Elements</span>
+            </h2>
+            
+            <div class="info-box">
+                <h4>💡 Fundamental Properties</h4>
+                <p>CSS Typography mengontrol tampilan teks pada halaman web. Memahami property typography penting untuk desain yang readable dan estetik.</p>
+            </div>
+            
+            <div class="code-container">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <span>typography.css</span>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="comment">/* Font Properties */</span><br>
+                        <span class="tag">body</span> {<br>
+                        &nbsp;&nbsp;<span class="attr">font-family</span>: <span class="string">'Segoe UI', sans-serif</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">font-size</span>: <span class="string">1rem</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">font-weight</span>: <span class="string">400</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">font-style</span>: <span class="string">normal</span>;<br>
+                        }<br><br>
+                        
+                        <span class="comment">/* Text Properties */</span><br>
+                        <span class="tag">h1</span> {<br>
+                        &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">#9333ea</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">text-align</span>: <span class="string">center</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">text-transform</span>: <span class="string">capitalize</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">text-decoration</span>: <span class="string">underline</span>;<br>
+                        }<br><br>
+                        
+                        <span class="comment">/* Spacing Properties */</span><br>
+                        <span class="tag">p</span> {<br>
+                        &nbsp;&nbsp;<span class="attr">line-height</span>: <span class="string">1.6</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">letter-spacing</span>: <span class="string">0.5px</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">word-spacing</span>: <span class="string">2px</span>;<br>
+                        }
+                    </code>
+                </div>
+            </div>
+            
+            <div class="explanation">
+                <p><strong>📝 Penjelasan Detail:</strong></p>
+                <p>
+                    • <code>font-family</code> - <span class="highlight">menentukan jenis font</span><br>
+                    • <code>font-size</code> - <strong>ukuran teks</strong> (px, em, rem, %)<br>
+                    • <code>font-weight</code> - <strong>ketebalan font</strong> (100-900 atau normal/bold)<br>
+                    • <code>text-align</code> - <strong>perataan teks</strong> (left, center, right, justify)<br>
+                    • <code>line-height</code> - <strong>spasi antar baris</strong> (penting untuk readability)
+                </p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">
+                <span>🛠️</span>
+                <span>Features</span>
+            </h2>
+            
+            <div class="code-container">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <span>advanced-typography.css</span>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="comment">/* Web Fonts */</span><br>
+                        <span class="tag">@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap')</span>;<br><br>
+                        
+                        <span class="tag">body</span> {<br>
+                        &nbsp;&nbsp;<span class="attr">font-family</span>: <span class="string">'Roboto', sans-serif</span>;<br>
+                        }<br><br>
+                        
+                        <span class="comment">/* Text Effects */</span><br>
+                        <span class="tag">.fancy-text</span> {<br>
+                        &nbsp;&nbsp;<span class="attr">text-shadow</span>: <span class="string">2px 2px 4px rgba(0,0,0,0.3)</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">text-overflow</span>: <span class="string">ellipsis</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">white-space</span>: <span class="string">nowrap</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">overflow</span>: <span class="string">hidden</span>;<br>
+                        }<br><br>
+                        
+                        <span class="comment">/* Custom Selection */</span><br>
+                        <span class="tag">::selection</span> {<br>
+                        &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">#9333ea</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">white</span>;<br>
+                        }
+                    </code>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h4>ℹ️ Browser Support</h4>
+                <p>Semua basic typography properties didukung penuh oleh semua browser modern. Web fonts (@font-face) didukung Chrome 4+, Firefox 3.5+, Safari 3.1+, IE 9+.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">
+                <span>📊</span>
+                <span>Basic Tables</span>
+            </h2>
+            
+            <div class="code-container">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <span>typography-values.css</span>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="comment">/* Font Weight Values */</span><br>
+                        <span class="tag">100</span> &nbsp;&nbsp;<span class="comment">/* Thin */</span><br>
+                        <span class="tag">400</span> &nbsp;&nbsp;<span class="comment">/* Normal */</span><br>
+                        <span class="tag">700</span> &nbsp;&nbsp;<span class="comment">/* Bold */</span><br>
+                        <span class="tag">900</span> &nbsp;&nbsp;<span class="comment">/* Black */</span><br><br>
+                        
+                        <span class="comment">/* Text Transform Values */</span><br>
+                        <span class="tag">none</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Default */</span><br>
+                        <span class="tag">capitalize</span> <span class="comment">/* Huruf pertama kapital */</span><br>
+                        <span class="tag">uppercase</span> &nbsp;<span class="comment">/* SEMUA HURUF BESAR */</span><br>
+                        <span class="tag">lowercase</span> &nbsp;<span class="comment">/* semua huruf kecil */</span><br><br>
+                        
+                        <span class="comment">/* Text Decoration Values */</span><br>
+                        <span class="tag">none</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Default */</span><br>
+                        <span class="tag">underline</span> &nbsp;&nbsp;<span class="comment">/* Garis bawah */</span><br>
+                        <span class="tag">overline</span> &nbsp;&nbsp;&nbsp;<span class="comment">/* Garis atas */</span><br>
+                        <span class="tag">line-through</span> <span class="comment">/* Coret tengah */</span>
+                    </code>
+                </div>
+            </div>
+            
+            <div class="explanation">
+                <p><strong>📝 Penjelasan Detail:</strong></p>
+                <p>
+                    • <strong>Font weight</strong> menentukan ketebalan font (100-900)<br>
+                    • <strong>Text transform</strong> mengontrol kapitalisasi teks<br>
+                    • <strong>Text decoration</strong> menambahkan garis dekoratif<br>
+                    • <span class="highlight">rem units</span> lebih baik untuk aksesibilitas (relatif ke root font-size)<br>
+                    • <strong>Line-height</strong> tanpa unit lebih fleksibel (1.5 lebih baik dari 24px)
+                </p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">
+                <span>🚀</span>
+                <span>Advanced Table</span>
+            </h2>
+            
+            <div class="code-container">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <span>advanced-properties.css</span>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="comment">/* Variable Fonts */</span><br>
+                        <span class="tag">@font-face</span> {<br>
+                        &nbsp;&nbsp;<span class="attr">font-family</span>: <span class="string">'Inter var'</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">src</span>: <span class="string">url('Inter.var.woff2') format('woff2-variations')</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">font-weight</span>: <span class="string">100 900</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">font-style</span>: <span class="string">oblique 0deg 10deg</span>;<br>
+                        }<br><br>
+                        
+                        <span class="comment">/* Text Rendering */</span><br>
+                        <span class="tag">body</span> {<br>
+                        &nbsp;&nbsp;<span class="attr">text-rendering</span>: <span class="string">optimizeLegibility</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">font-kerning</span>: <span class="string">normal</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">font-variant-ligatures</span>: <span class="string">common-ligatures</span>;<br>
+                        }<br><br>
+                        
+                        <span class="comment">/* Vertical Rhythm */</span><br>
+                        <span class="tag">h1, h2, h3, p</span> {<br>
+                        &nbsp;&nbsp;<span class="attr">margin-bottom</span>: <span class="string">1.5rem</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">line-height</span>: <span class="string">1.3</span>;<br>
+                        }
+                    </code>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h4>ℹ️ Browser Support</h4>
+                <p>Variable fonts: Chrome 62+, Firefox 62+, Safari 11+, Edge 17+. Text-rendering: Chrome 4+, Firefox 1+, Safari 5+, IE 9+. Font-kerning: Chrome 33+, Firefox 32+, Safari 9.1+, Edge 12+.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">
+                <span>💡</span>
+                <span>Pro Tips</span>
+            </h2>
+            
+            <div class="info-box">
+                <h4>🎯 Best Practices</h4>
+                <p>Gunakan system font stack untuk performance, set base line-height 1.5 untuk readability, dan gunakan clamp() untuk responsive typography.</p>
+            </div>
+            
+            <div class="code-container">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <span>best-practices.css</span>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="comment">/* ✅ Good - System font stack */</span><br>
+                        <span class="tag">body</span> {<br>
+                        &nbsp;&nbsp;<span class="attr">font-family</span>: <span class="string">-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif</span>;<br>
+                        }<br><br>
+                        
+                        <span class="comment">/* ✅ Good - Responsive typography */</span><br>
+                        <span class="tag">h1</span> {<br>
+                        &nbsp;&nbsp;<span class="attr">font-size</span>: <span class="string">clamp(1.75rem, 5vw, 2.5rem)</span>;<br>
+                        }<br><br>
+                        
+                        <span class="comment">/* ❌ Avoid - Fixed pixel values */</span><br>
+                        <span class="tag">p</span> {<br>
+                        &nbsp;&nbsp;<span class="attr">font-size</span>: <span class="string">16px</span>;<br>
+                        &nbsp;&nbsp;<span class="attr">line-height</span>: <span class="string">24px</span>;<br>
+                        }<br><br>
+                        
+                        <span class="comment">/* ❌ Avoid - Too many web fonts */</span><br>
+                        <span class="tag">body</span> {<br>
+                        &nbsp;&nbsp;<span class="attr">font-family</span>: <span class="string">'Poppins', 'Montserrat', 'Raleway', sans-serif</span>;<br>
+                        }
+                    </code>
+                </div>
+            </div>
+            
+            <div class="explanation">
+                <p><strong>📝 Penjelasan Detail:</strong></p>
+                <p>
+                    • <strong>System fonts</strong> - load lebih cepat dari web fonts<br>
+                    • <strong>clamp()</strong> - buat font-size responsive dengan minimum dan maximum<br>
+                    • <strong>Relative units</strong> - gunakan rem/em untuk aksesibilitas<br>
+                    • <strong>Limit font variations</span> - 2-3 font family maksimal<br>
+                        • <strong>Vertical rhythm</strong> - pertahankan konsistensi spasi vertikal<br>
+                        • <strong>Variable fonts</strong> - single file dengan banyak variasi
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

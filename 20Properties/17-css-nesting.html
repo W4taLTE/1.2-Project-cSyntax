@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Nesting Demo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>📛 CSS Nesting</h1>
+    <p>Panduan lengkap CSS Nesting untuk styling web modern</p>
+  </header>
+  
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">
+        <span>📌</span>
+        <span>Elements</span>
+      </h2>
+      
+      <div class="info-box">
+        <h4>💡 Nesting Fundamental</h4>
+        <p>CSS Nesting memungkinkan Anda menulis rules CSS dalam struktur bersarang yang lebih intuitif, mirip dengan HTML.</p>
+      </div>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>nesting.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Traditional CSS */</span><br>
+            <span class="tag">.header</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">#9333ea</span>;<br>
+            }<br>
+            <br>
+            <span class="tag">.header h1</span> {<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">white</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* Dengan CSS Nesting */</span><br>
+            <span class="tag">.header</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">#9333ea</span>;<br>
+            <br>
+            &nbsp;&nbsp;<span class="tag">& h1</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">color</span>: <span class="string">white</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br>
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>&</code> - <span class="highlight">Nesting selector</span> merujuk ke parent selector<br>
+          • Bisa nested hingga beberapa level (tapi jangan berlebihan)<br>
+          • Mendukung semua jenis selector (class, id, pseudo-class, dll)<br>
+          • Lebih mudah dibaca dan di-maintain untuk komponen kompleks
+        </p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>🛠️</span>
+        <span>Features</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>nesting-features.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Nesting dengan pseudo-class */</span><br>
+            <span class="tag">.button</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">#9333ea</span>;<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">white</span>;<br>
+            <br>
+            &nbsp;&nbsp;<span class="tag">&:hover</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">background</span>: <span class="string">#a855f7</span>;<br>
+            &nbsp;&nbsp;}<br>
+            <br>
+            &nbsp;&nbsp;<span class="tag">&:active</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">scale(0.98)</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br>
+            <br>
+            <span class="comment">/* Nesting media queries */</span><br>
+            <span class="tag">.card</span> {<br>
+            &nbsp;&nbsp;<span class="attr">padding</span>: <span class="string">1rem</span>;<br>
+            <br>
+            &nbsp;&nbsp;<span class="tag">@media (min-width: 768px)</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">padding</span>: <span class="string">2rem</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br>
+          </code>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>CSS Nesting didukung di Chrome 112+, Firefox 117+, Safari 16.5+, Edge 112+. Untuk browser lama, bisa menggunakan PostCSS untuk kompilasi.</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>📊</span>
+        <span>Basic Tables</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>nesting-patterns.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Multiple nesting */</span><br>
+            <span class="tag">.article</span> {<br>
+            &nbsp;&nbsp;<span class="attr">max-width</span>: <span class="string">800px</span>;<br>
+            <br>
+            &nbsp;&nbsp;<span class="tag">& h2</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">color</span>: <span class="string">#9333ea</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">margin-bottom</span>: <span class="string">1rem</span>;<br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">& span</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">font-weight</span>: <span class="string">normal</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;}<br>
+            <br>
+            &nbsp;&nbsp;<span class="tag">& p</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">line-height</span>: <span class="string">1.6</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br>
+            <br>
+            <span class="comment">/* Nesting dengan combinators */</span><br>
+            <span class="tag">.menu</span> {<br>
+            &nbsp;&nbsp;<span class="tag">& > li</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">display</span>: <span class="string">inline-block</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br>
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>&</strong> bisa digunakan dengan semua combinator (>, +, ~)<br>
+          • Bisa menggabungkan dengan pseudo-class/elements<br>
+          • Support nesting media queries dan container queries<br>
+          • Bisa digunakan bersama @scope dan @layer<br>
+          • Tidak meningkatkan specificity dibanding CSS biasa
+        </p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>🚀</span>
+        <span>Advanced Table</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-nesting.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Nesting dengan @scope */</span><br>
+            <span class="tag">@scope (.card)</span> {<br>
+            &nbsp;&nbsp;<span class="tag">:scope</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">border</span>: <span class="string">1px solid #9333ea</span>;<br>
+            &nbsp;&nbsp;}<br>
+            <br>
+            &nbsp;&nbsp;<span class="tag">h2</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">color</span>: <span class="string">#a855f7</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br>
+            <br>
+            <span class="comment">/* Nesting dengan @layer */</span><br>
+            <span class="tag">@layer components</span> {<br>
+            &nbsp;&nbsp;<span class="tag">.button</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">padding</span>: <span class="string">0.5rem 1rem</span>;<br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&--primary</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">background</span>: <span class="string">#9333ea</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;}<br>
+            }<br>
+          </code>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <h4>ℹ️ Advanced Support</h4>
+        <p>Fitur advanced seperti @scope dan @layer dengan nesting membutuhkan browser terbaru (Chrome 118+, Firefox 115+, Safari 17+).</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>💡</span>
+        <span>Pro Tips</span>
+      </h2>
+      
+      <div class="info-box">
+        <h4>🎯 Best Practices</h4>
+        <p>Gunakan nesting dengan bijak - maksimal 3-4 level kedalaman. Hindari nesting berlebihan yang membuat CSS sulit dibaca dan di-maintain.</p>
+      </div>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>best-practices.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* ✅ Good - Moderate nesting */</span><br>
+            <span class="tag">.card</span> {<br>
+            &nbsp;&nbsp;<span class="attr">border-radius</span>: <span class="string">8px</span>;<br>
+            <br>
+            &nbsp;&nbsp;<span class="tag">& .header</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">padding</span>: <span class="string">1rem</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">background</span>: <span class="string">#9333ea</span>;<br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">& h2</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">color</span>: <span class="string">white</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;}<br>
+            }<br>
+            <br>
+            <span class="comment">/* ❌ Avoid - Too deep nesting */</span><br>
+            <span class="tag">.page</span> {<br>
+            &nbsp;&nbsp;<span class="tag">& .content</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">& .article</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">& .header</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">& h1</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">color</span>: <span class="string">#9333ea</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;}<br>
+            }<br>
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Gunakan BEM dengan nesting</strong> - kombinasikan manfaat keduanya<br>
+          • <strong>Hindari over-qualification</strong> - jangan nested selector yang sudah spesifik<br>
+          • <strong>Group related styles</strong> - nesting bagus untuk komponen yang terkait<br>
+          • <strong>Perhatikan output CSS</strong> - nesting bisa menghasilkan CSS yang lebih besar<br>
+          • <strong>Gunakan tools</strong> - PostCSS atau Sass jika butuh kompatibilitas luas
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

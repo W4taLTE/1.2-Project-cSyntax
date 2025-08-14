@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Pseudo-classes & Elements Demo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>📛 Pseudo-classes & Elements</h1>
+    <p>Panduan lengkap CSS Pseudo-classes & Elements untuk styling web modern</p>
+  </header>
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">
+        <span>📌</span>
+        <span>Elements</span>
+      </h2>
+      <div class="info-box">
+        <h4>💡 Selector Fundamental</h4>
+        <p>Pseudo-classes dan pseudo-elements adalah fitur CSS yang memungkinkan Anda memilih elemen berdasarkan keadaan atau bagian tertentu dari elemen tersebut.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>pseudo-selectors.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Pseudo-classes */</span><br>
+            <span class="tag">a:hover</span> {<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">#a855f7</span>;<br>
+            &nbsp;&nbsp;<span class="attr">transition</span>: <span class="string">color 0.3s ease</span>;<br>
+            }<br><br>
+            <span class="tag">input:focus</span> {<br>
+            &nbsp;&nbsp;<span class="attr">outline</span>: <span class="string">2px solid #9333ea</span>;<br>
+            &nbsp;&nbsp;<span class="attr">border-color</span>: <span class="string">transparent</span>;<br>
+            }<br><br>
+            <span class="comment">/* Structural pseudo-classes */</span><br>
+            <span class="tag">li:nth-child(odd)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">rgba(147, 51, 234, 0.1)</span>;<br>
+            }<br><br>
+            <span class="comment">/* Pseudo-elements */</span><br>
+            <span class="tag">.card::before</span> {<br>
+            &nbsp;&nbsp;<span class="attr">content</span>: <span class="string">""</span>;<br>
+            &nbsp;&nbsp;<span class="attr">position</span>: <span class="string">absolute</span>;<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">linear-gradient(45deg, #9333ea, #a855f7)</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>:hover</code> - <span class="highlight">Pseudo-class</span> untuk keadaan hover<br>
+          • <code>:focus</code> - <strong>Pseudo-class</strong> untuk keadaan fokus<br>
+          • <code>:nth-child()</code> - <strong>Pseudo-class</strong> untuk memilih elemen berdasarkan urutan<br>
+          • <code>::before</code> - <strong>Pseudo-element</strong> untuk menambahkan konten sebelum elemen<br>
+          • <code>::after</code> - <strong>Pseudo-element</strong> untuk menambahkan konten setelah elemen
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🛠️</span>
+        <span>Features</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-pseudo.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Combining pseudo-classes */</span><br>
+            <span class="tag">button:hover:focus</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">#9333ea</span>;<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">white</span>;<br>
+            }<br><br>
+            <span class="comment">/* Using pseudo-elements with content */</span><br>
+            <span class="tag">.tooltip::after</span> {<br>
+            &nbsp;&nbsp;<span class="attr">content</span>: <span class="string">"Info"</span>;<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">#a855f7</span>;<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">white</span>;<br>
+            }<br><br>
+            <span class="comment">/* Customizing form elements */</span><br>
+            <span class="tag">input:disabled</span> {<br>
+            &nbsp;&nbsp;<span class="attr">opacity</span>: <span class="string">0.5</span>;<br>
+            &nbsp;&nbsp;<span class="attr">cursor</span>: <span class="string">not-allowed</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Pseudo-classes dan pseudo-elements didukung penuh oleh semua browser modern (Chrome, Firefox, Safari, Edge). Beberapa pseudo-class seperti <code>:focus-within</code> memerlukan dukungan tambahan di browser lama.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>📊</span>
+        <span>Basic Tables</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>pseudo-values.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Common Pseudo-classes */</span><br>
+            <span class="tag">:hover</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Elemen saat dihover */</span><br>
+            <span class="tag">:focus</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Elemen saat fokus */</span><br>
+            <span class="tag">:active</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Elemen saat aktif */</span><br>
+            <span class="tag">:first-child</span> &nbsp;<span class="comment">/* Elemen pertama */</span><br>
+            <span class="tag">:last-child</span> &nbsp;&nbsp;<span class="comment">/* Elemen terakhir */</span><br><br>
+            <span class="comment">/* Common Pseudo-elements */</span><br>
+            <span class="tag">::before</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Konten sebelum elemen */</span><br>
+            <span class="tag">::after</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Konten setelah elemen */</span><br>
+            <span class="tag">::first-line</span> &nbsp;<span class="comment">/* Baris pertama teks */</span><br>
+            <span class="tag">::first-letter</span> <span class="comment">/* Huruf pertama teks */</span>
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Pseudo-classes</strong> digunakan untuk memilih elemen berdasarkan keadaan atau posisi.<br>
+          • <strong>Pseudo-elements</strong> digunakan untuk memilih bagian tertentu dari elemen.<br>
+          • <span class="highlight">:hover</span> dan <span class="highlight">:focus</span> adalah pseudo-class yang paling umum digunakan.<br>
+          • <span class="highlight">::before</span> dan <span class="highlight">::after</span> adalah pseudo-elements yang sering digunakan untuk styling tambahan.
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🚀</span>
+        <span>Advanced Table</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-pseudo.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Custom scrollbar */</span><br>
+            <span class="tag">::-webkit-scrollbar</span> {<br>
+            &nbsp;&nbsp;<span class="attr">width</span>: <span class="string">10px</span>;<br>
+            }<br><br>
+            <span class="comment">/* Styling placeholder text */</span><br>
+            <span class="tag">::placeholder</span> {<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">#a855f7</span>;<br>
+            &nbsp;&nbsp;<span class="attr">opacity</span>: <span class="string">0.7</span>;<br>
+            }<br><br>
+            <span class="comment">/* Selecting empty elements */</span><br>
+            <span class="tag">div:empty</span> {<br>
+            &nbsp;&nbsp;<span class="attr">display</span>: <span class="string">none</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Pseudo-elements seperti <code>::placeholder</code> dan <code>::-webkit-scrollbar</code> memiliki dukungan terbatas di beberapa browser. Selalu periksa kompatibilitas sebelum digunakan.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>💡</span>
+        <span>Pro Tips</span>
+      </h2>
+      <div class="info-box">
+        <h4>🎯 Best Practices</h4>
+        <p>Gunakan pseudo-classes dan pseudo-elements untuk meningkatkan interaktivitas dan tampilan tanpa menambahkan markup HTML tambahan.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>best-practices.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* ✅ Good - Simple and effective */</span><br>
+            <span class="tag">button:hover</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">#9333ea</span>;<br>
+            }<br><br>
+            <span class="comment">/* ❌ Avoid - Overcomplicating */</span><br>
+            <span class="tag">button:hover:focus:active</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">#a855f7</span>;<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">white</span>;<br>
+            &nbsp;&nbsp;<span class="attr">border</span>: <span class="string">2px solid #9333ea</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Keep it simple</strong> - Gunakan pseudo-classes dan pseudo-elements dengan bijak.<br>
+          • <strong>Avoid overcomplicating</strong> - Jangan menggabungkan terlalu banyak pseudo-classes.<br>
+          • <strong>Test cross-browser</strong> - Selalu uji di berbagai browser untuk memastikan kompatibilitas.<br>
+          • <strong>Use for enhancement</strong> - Gunakan fitur ini untuk meningkatkan pengalaman pengguna, bukan sebagai kebutuhan utama.
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

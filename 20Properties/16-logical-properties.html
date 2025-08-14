@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Logical Properties Demo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>📛 Logical Properties</h1>
+    <p>Panduan lengkap CSS Logical Properties untuk layout yang adaptif dengan arah teks</p>
+  </header>
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">
+        <span>📌</span>
+        <span>Elements</span>
+      </h2>
+      <div class="info-box">
+        <h4>💡 Logical Properties Fundamentals</h4>
+        <p>CSS Logical Properties memungkinkan Anda membuat layout yang bekerja secara konsisten terlepas dari arah teks (LTR/RTL) atau mode penulisan (horizontal/vertikal).</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>logical-props.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Basic Logical Properties */</span><br>
+            <span class="tag">.box</span> {<br>
+            &nbsp;&nbsp;<span class="attr">margin-inline-start</span>: <span class="string">1rem</span>;<br>
+            &nbsp;&nbsp;<span class="attr">padding-block-end</span>: <span class="string">2rem</span>;<br>
+            }<br><br>
+            <span class="comment">/* Logical Sizing */</span><br>
+            <span class="tag">.container</span> {<br>
+            &nbsp;&nbsp;<span class="attr">inline-size</span>: <span class="string">100%</span>;<br>
+            &nbsp;&nbsp;<span class="attr">max-block-size</span>: <span class="string">80vh</span>;<br>
+            }<br><br>
+            <span class="comment">/* Logical Borders */</span><br>
+            <span class="tag">.card</span> {<br>
+            &nbsp;&nbsp;<span class="attr">border-inline</span>: <span class="string">2px solid #9333ea</span>;<br>
+            &nbsp;&nbsp;<span class="attr">border-block-start</span>: <span class="string">none</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>*-inline</code> - Mengacu pada dimensi horizontal (kiri/kanan)<br>
+          • <code>*-block</code> - Mengacu pada dimensi vertikal (atas/bawah)<br>
+          • <code>*-start</code> - Awal dari arah teks (kiri untuk LTR, kanan untuk RTL)<br>
+          • <code>*-end</code> - Akhir dari arah teks (kanan untuk LTR, kiri untuk RTL)
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🛠️</span>
+        <span>Features</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>logical-layout.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Logical Float */</span><br>
+            <span class="tag">img</span> {<br>
+            &nbsp;&nbsp;<span class="attr">float</span>: <span class="string">inline-start</span>;<br>
+            &nbsp;&nbsp;<span class="attr">margin-inline-end</span>: <span class="string">1rem</span>;<br>
+            }<br><br>
+            <span class="comment">/* Logical Positioning */</span><br>
+            <span class="tag">.tooltip</span> {<br>
+            &nbsp;&nbsp;<span class="attr">inset-inline-start</span>: <span class="string">0</span>;<br>
+            &nbsp;&nbsp;<span class="attr">inset-block-start</span>: <span class="string">100%</span>;<br>
+            }<br><br>
+            <span class="comment">/* Logical Text Alignment */</span><br>
+            <span class="tag">.rtl-text</span> {<br>
+            &nbsp;&nbsp;<span class="attr">text-align</span>: <span class="string">end</span>;<br>
+            &nbsp;&nbsp;<span class="attr">direction</span>: <span class="string">rtl</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Logical Properties didukung di Chrome 69+, Firefox 41+, Safari 12.1+, Edge 79+. Beberapa properti memerlukan prefix (-webkit-) di Safari.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>📊</span>
+        <span>Basic Tables</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>logical-values.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Physical to Logical Mappings */</span><br>
+            <span class="tag">.mapping</span> {<br>
+            &nbsp;&nbsp;<span class="attr">/* left → */</span> <span class="attr">margin-inline-start</span>: <span class="string">1rem</span>;<br>
+            &nbsp;&nbsp;<span class="attr">/* right → */</span> <span class="attr">margin-inline-end</span>: <span class="string">1rem</span>;<br>
+            &nbsp;&nbsp;<span class="attr">/* top → */</span> <span class="attr">margin-block-start</span>: <span class="string">1rem</span>;<br>
+            &nbsp;&nbsp;<span class="attr">/* bottom → */</span> <span class="attr">margin-block-end</span>: <span class="string">1rem</span>;<br>
+            }<br><br>
+            <span class="comment">/* Size Properties */</span><br>
+            <span class="tag">.sizes</span> {<br>
+            &nbsp;&nbsp;<span class="attr">/* width → */</span> <span class="attr">inline-size</span>: <span class="string">100px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">/* height → */</span> <span class="attr">block-size</span>: <span class="string">200px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">/* min-width → */</span> <span class="attr">min-inline-size</span>: <span class="string">50px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">/* max-height → */</span> <span class="attr">max-block-size</span>: <span class="string">300px</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>margin-inline</code> - Margin kiri dan kanan (atau kanan dan kiri di RTL)<br>
+          • <code>padding-block</code> - Padding atas dan bawah<br>
+          • <code>inline-size</code> - Lebar dalam konteks writing-mode<br>
+          • <code>block-size</code> - Tinggi dalam konteks writing-mode<br>
+          • <code>inset-*</code> - Pengganti top/right/bottom/left untuk positioning
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🚀</span>
+        <span>Advanced Table</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-logical.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Logical Properties with Writing Modes */</span><br>
+            <span class="tag">.vertical-text</span> {<br>
+            &nbsp;&nbsp;<span class="attr">writing-mode</span>: <span class="string">vertical-rl</span>;<br>
+            &nbsp;&nbsp;<span class="attr">margin-block</span>: <span class="string">2rem</span>; <span class="comment">/* Now horizontal */</span><br>
+            &nbsp;&nbsp;<span class="attr">padding-inline</span>: <span class="string">1rem</span>; <span class="comment">/* Now vertical */</span><br>
+            }<br><br>
+            <span class="comment">/* Logical Border Radius */</span><br>
+            <span class="tag">.rounded</span> {<br>
+            &nbsp;&nbsp;<span class="attr">border-start-start-radius</span>: <span class="string">10px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">border-end-end-radius</span>: <span class="string">10px</span>;<br>
+            }<br><br>
+            <span class="comment">/* Logical Overflow */</span><br>
+            <span class="tag">.scrollable</span> {<br>
+            &nbsp;&nbsp;<span class="attr">overflow-inline</span>: <span class="string">auto</span>;<br>
+            &nbsp;&nbsp;<span class="attr">overflow-block</span>: <span class="string">hidden</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Writing-mode: Chrome 8+, Firefox 41+, Safari 5.1+, Edge 79+. Logical border-radius: Chrome 89+, Firefox 66+, Safari 15+, Edge 89+.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>💡</span>
+        <span>Pro Tips</span>
+      </h2>
+      <div class="info-box">
+        <h4>🎯 Best Practices</h4>
+        <p>Gunakan logical properties untuk membuat layout yang benar-benar responsif terhadap perubahan arah teks dan writing mode.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>best-practices.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* ✅ Good - Using logical properties */</span><br>
+            <span class="tag">.modern-layout</span> {<br>
+            &nbsp;&nbsp;<span class="attr">margin-inline</span>: <span class="string">auto</span>;<br>
+            &nbsp;&nbsp;<span class="attr">padding-block</span>: <span class="string">1rem</span>;<br>
+            &nbsp;&nbsp;<span class="attr">max-inline-size</span>: <span class="string">1200px</span>;<br>
+            }<br><br>
+            <span class="comment">/* ✅ Good - With fallback */</span><br>
+            <span class="tag">.with-fallback</span> {<br>
+            &nbsp;&nbsp;<span class="attr">margin-left</span>: <span class="string">1rem</span>;<br>
+            &nbsp;&nbsp;<span class="attr">margin-right</span>: <span class="string">1rem</span>;<br>
+            &nbsp;&nbsp;<span class="attr">margin-inline</span>: <span class="string">1rem</span>;<br>
+            }<br><br>
+            <span class="comment">/* ❌ Avoid - Mixing logical and physical */</span><br>
+            <span class="tag">.confusing</span> {<br>
+            &nbsp;&nbsp;<span class="attr">margin-inline-start</span>: <span class="string">1rem</span>;<br>
+            &nbsp;&nbsp;<span class="attr">padding-right</span>: <span class="string">1rem</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Gunakan secara konsisten</strong> - Hindari mencampur logical dan physical properties<br>
+          • <strong>Sediakan fallback</strong> - Untuk browser yang lebih lama jika diperlukan<br>
+          • <strong>Manfaatkan shorthand</strong> - Seperti margin-inline untuk kode yang lebih ringkas<br>
+          • <strong>Uji berbagai writing-mode</strong> - Pastikan layout bekerja di semua konteks<br>
+          • <strong>Pertimbangkan aksesibilitas</strong> - Logical properties membantu mendukung RTL
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Filters & Blend Modes Demo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>📛 Filters & Blend Modes</h1>
+    <p>Panduan lengkap CSS Filters & Blend Modes untuk efek visual modern</p>
+  </header>
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">
+        <span>📌</span>
+        <span>Elements</span>
+      </h2>
+      <div class="info-box">
+        <h4>💡 Fundamental Filters & Blend Modes</h4>
+        <p>CSS Filters & Blend Modes memungkinkan Anda menerapkan efek visual seperti blur, grayscale, dan blending pada elemen HTML. Fitur ini sangat berguna untuk desain kreatif.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>filters.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Basic Filter */</span><br>
+            <span class="tag">.image</span> {<br>
+            &nbsp;&nbsp;<span class="attr">filter</span>: <span class="string">grayscale(100%)</span>;<br>
+            }<br><br>
+            <span class="comment">/* Multiple Filters */</span><br>
+            <span class="tag">.card</span> {<br>
+            &nbsp;&nbsp;<span class="attr">filter</span>: <span class="string">blur(2px) brightness(0.8)</span>;<br>
+            }<br><br>
+            <span class="comment">/* Blend Mode */</span><br>
+            <span class="tag">.overlay</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background-color</span>: <span class="string">#9333ea</span>;<br>
+            &nbsp;&nbsp;<span class="attr">mix-blend-mode</span>: <span class="string">multiply</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>filter</code> - Menerapkan efek visual seperti blur, grayscale, atau brightness.<br>
+          • <code>mix-blend-mode</code> - Mengontrol bagaimana elemen berinteraksi dengan elemen di bawahnya.<br>
+          • <code>background-blend-mode</code> - Menggabungkan warna dan gambar latar belakang.
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🛠️</span>
+        <span>Features</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-filters.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Drop Shadow */</span><br>
+            <span class="tag">.shadow</span> {<br>
+            &nbsp;&nbsp;<span class="attr">filter</span>: <span class="string">drop-shadow(4px 4px 8px #9333ea)</span>;<br>
+            }<br><br>
+            <span class="comment">/* Hue Rotation */</span><br>
+            <span class="tag">.hue</span> {<br>
+            &nbsp;&nbsp;<span class="attr">filter</span>: <span class="string">hue-rotate(90deg)</span>;<br>
+            }<br><br>
+            <span class="comment">/* Complex Blend Mode */</span><br>
+            <span class="tag">.complex-blend</span> {<br>
+            &nbsp;&nbsp;<span class="attr">mix-blend-mode</span>: <span class="string">difference</span>;<br>
+            &nbsp;&nbsp;<span class="attr">background-color</span>: <span class="string">#a855f7</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Filters: Chrome 18+, Firefox 35+, Safari 6+, Edge 79+. Blend Modes: Chrome 41+, Firefox 32+, Safari 8+, Edge 79+.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>📊</span>
+        <span>Basic Tables</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>filter-values.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Common Filter Values */</span><br>
+            <span class="tag">.grayscale</span> {<br>
+            &nbsp;&nbsp;<span class="attr">filter</span>: <span class="string">grayscale(1)</span>;<br>
+            }<br><br>
+            <span class="tag">.blur</span> {<br>
+            &nbsp;&nbsp;<span class="attr">filter</span>: <span class="string">blur(5px)</span>;<br>
+            }<br><br>
+            <span class="tag">.brightness</span> {<br>
+            &nbsp;&nbsp;<span class="attr">filter</span>: <span class="string">brightness(1.5)</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>grayscale(1)</code> - Mengubah elemen menjadi hitam putih.<br>
+          • <code>blur(5px)</code> - Menambahkan efek blur dengan radius 5px.<br>
+          • <code>brightness(1.5)</code> - Meningkatkan kecerahan elemen.
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🚀</span>
+        <span>Advanced Table</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>blend-modes.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Blend Modes */</span><br>
+            <span class="tag">.multiply</span> {<br>
+            &nbsp;&nbsp;<span class="attr">mix-blend-mode</span>: <span class="string">multiply</span>;<br>
+            }<br><br>
+            <span class="tag">.screen</span> {<br>
+            &nbsp;&nbsp;<span class="attr">mix-blend-mode</span>: <span class="string">screen</span>;<br>
+            }<br><br>
+            <span class="tag">.overlay</span> {<br>
+            &nbsp;&nbsp;<span class="attr">mix-blend-mode</span>: <span class="string">overlay</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Blend Modes: Chrome 41+, Firefox 32+, Safari 8+, Edge 79+.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>💡</span>
+        <span>Pro Tips</span>
+      </h2>
+      <div class="info-box">
+        <h4>🎯 Best Practices</h4>
+        <p>Gunakan filter dan blend modes secara bertanggung jawab untuk meningkatkan desain tanpa mengorbankan performa.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>best-practices.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* ✅ Good - Simple and effective */</span><br>
+            <span class="tag">.hero-image</span> {<br>
+            &nbsp;&nbsp;<span class="attr">filter</span>: <span class="string">brightness(0.8) contrast(1.2)</span>;<br>
+            }<br><br>
+            <span class="comment">/* ❌ Avoid - Overusing filters */</span><br>
+            <span class="tag">.over-filtered</span> {<br>
+            &nbsp;&nbsp;<span class="attr">filter</span>: <span class="string">blur(5px) grayscale(1) sepia(1)</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Gunakan secara selektif</strong> - Terlalu banyak filter dapat mengurangi performa.<br>
+          • <strong>Kombinasikan dengan bijak</strong> - Pilih filter yang saling melengkapi.<br>
+          • <strong>Uji di berbagai browser</strong> - Pastikan efek yang diterapkan konsisten.
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

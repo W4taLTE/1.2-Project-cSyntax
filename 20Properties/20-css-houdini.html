@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Houdini Demo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>📛 CSS Houdini</h1>
+    <p>Panduan lengkap CSS Houdini untuk memperluas kemampuan CSS dengan JavaScript</p>
+  </header>
+  
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">
+        <span>📌</span>
+        <span>Elements</span>
+      </h2>
+      
+      <div class="info-box">
+        <h4>💡 Houdini Fundamental</h4>
+        <p>CSS Houdini adalah kumpulan API yang memungkinkan pengembang untuk memperluas CSS dengan JavaScript, memberikan kontrol lebih besar atas rendering dan animasi.</p>
+      </div>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>houdini.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Custom Properties and Values API */</span><br>
+            <span class="tag">CSS.registerProperty</span>({<br>
+            &nbsp;&nbsp;<span class="attr">name</span>: <span class="string">'--gradient-angle'</span>,<br>
+            &nbsp;&nbsp;<span class="attr">syntax</span>: <span class="string">'&lt;angle&gt;'</span>,<br>
+            &nbsp;&nbsp;<span class="attr">initialValue</span>: <span class="string">'0deg'</span>,<br>
+            &nbsp;&nbsp;<span class="attr">inherits</span>: <span class="string">false</span><br>
+            });<br>
+            <br>
+            <span class="comment">/* Paint API */</span><br>
+            <span class="tag">CSS.paintWorklet.addModule</span>(<span class="string">'paint-worklet.js'</span>);<br>
+            <br>
+            <span class="comment">/* Layout API */</span><br>
+            <span class="tag">CSS.layoutWorklet.addModule</span>(<span class="string">'layout-worklet.js'</span>);<br>
+            <br>
+            <span class="comment">/* Animation Worklet */</span><br>
+            <span class="tag">CSS.animationWorklet.addModule</span>(<span class="string">'animation-worklet.js'</span>);
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>CSS.registerProperty</code> - <span class="highlight">Mendaftarkan properti kustom</span> dengan tipe dan nilai awal<br>
+          • <code>CSS.paintWorklet</code> - <strong>Paint API</strong> untuk menggambar elemen secara dinamis<br>
+          • <code>CSS.layoutWorklet</code> - <strong>Layout API</strong> untuk membuat layout kustom<br>
+          • <code>CSS.animationWorklet</code> - <strong>Animation Worklet</strong> untuk animasi performa tinggi
+        </p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>🛠️</span>
+        <span>Features</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>houdini-features.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Custom Paint Worklet */</span><br>
+            <span class="tag">.custom-background</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">paint(checkerboard)</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* Custom Properties */</span><br>
+            <span class="tag">:root</span> {<br>
+            &nbsp;&nbsp;<span class="attr">--gradient-angle</span>: <span class="string">45deg</span>;<br>
+            &nbsp;&nbsp;<span class="attr">--gradient-colors</span>: <span class="string">#9333ea, #a855f7</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* Custom Layout Worklet */</span><br>
+            <span class="tag">.custom-layout</span> {<br>
+            &nbsp;&nbsp;<span class="attr">display</span>: <span class="string">layout(masonry)</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* Animation Worklet */</span><br>
+            <span class="tag">.animated-element</span> {<br>
+            &nbsp;&nbsp;<span class="attr">animation</span>: <span class="string">scroll 1s linear infinite</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>CSS Houdini didukung sebagian di Chrome 78+, Edge 79+, dan Opera 65+. Firefox dan Safari memiliki dukungan terbatas (per 2023).</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>📊</span>
+        <span>Basic Tables</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>houdini-values.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Properties and Values API */</span><br>
+            <span class="tag">syntax</span>: <span class="string">'&lt;length&gt;'</span> <span class="comment">/* Nilai panjang */</span><br>
+            <span class="tag">syntax</span>: <span class="string">'&lt;color&gt;'</span> <span class="comment">/* Nilai warna */</span><br>
+            <span class="tag">syntax</span>: <span class="string">'&lt;angle&gt;'</span> <span class="comment">/* Nilai sudut */</span><br>
+            <span class="tag">syntax</span>: <span class="string">'&lt;percentage&gt;'</span> <span class="comment">/* Nilai persentase */</span><br>
+            <br>
+            <span class="comment">/* Paint API */</span><br>
+            <span class="tag">paint()</span> <span class="comment">/* Fungsi untuk menggambar */</span><br>
+            <span class="tag">registerPaint()</span> <span class="comment">/* Mendaftarkan paint worklet */</span><br>
+            <br>
+            <span class="comment">/* Layout API */</span><br>
+            <span class="tag">layout()</span> <span class="comment">/* Fungsi untuk layout kustom */</span><br>
+            <span class="tag">registerLayout()</span> <span class="comment">/* Mendaftarkan layout worklet */</span>
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Properties and Values API</strong> - Mendefinisikan properti kustom dengan tipe data spesifik<br>
+          • <strong>Paint API</strong> - Menggambar elemen secara dinamis dengan JavaScript<br>
+          • <strong>Layout API</strong> - Membuat layout kustom seperti masonry grid<br>
+          • <strong>Animation Worklet</strong> - Animasi performa tinggi di thread terpisah
+        </p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>🚀</span>
+        <span>Advanced Table</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-houdini.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Complex Paint Worklet */</span><br>
+            <span class="tag">registerPaint</span>(<span class="string">'gradient-border'</span>, <span class="tag">class</span> {<br>
+            &nbsp;&nbsp;<span class="attr">paint</span>(ctx, size, props) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">const angle</span> = props.get(<span class="string">'--gradient-angle'</span>).value;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">const colors</span> = props.get(<span class="string">'--gradient-colors'</span>).toString().split(<span class="string">','</span>);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">const gradient</span> = ctx.createLinearGradient(<span class="string">...</span>);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;ctx.fillStyle = gradient;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;ctx.fillRect(<span class="string">0, 0, size.width, size.height</span>);<br>
+            &nbsp;&nbsp;}<br>
+            });<br>
+            <br>
+            <span class="comment">/* Custom Layout Worklet */</span><br>
+            <span class="tag">registerLayout</span>(<span class="string">'masonry'</span>, <span class="tag">class</span> {<br>
+            &nbsp;&nbsp;<span class="attr">layout</span>(children, edges, constraints, styleMap) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Custom layout logic here</span><br>
+            &nbsp;&nbsp;}<br>
+            });<br>
+            <br>
+            <span class="comment">/* Animation Worklet */</span><br>
+            <span class="tag">registerAnimator</span>(<span class="string">'scroll'</span>, <span class="tag">class</span> {<br>
+            &nbsp;&nbsp;<span class="attr">animate</span>(currentTime, effect) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Animation logic here</span><br>
+            &nbsp;&nbsp;}<br>
+            });
+          </code>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <h4>ℹ️ Advanced Support</h4>
+        <p>Fitur lanjutan seperti Paint API dan Layout API memerlukan Chrome 78+ dengan flag experimental Web Platform Features.</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>💡</span>
+        <span>Pro Tips</span>
+      </h2>
+      
+      <div class="info-box">
+        <h4>🎯 Best Practices</h4>
+        <p>Gunakan CSS Houdini untuk kasus yang memerlukan kontrol tingkat rendah. Hindari penggunaan berlebihan untuk menjaga performa.</p>
+      </div>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>best-practices.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* ✅ Good - Simple Paint Worklet */</span><br>
+            <span class="tag">registerPaint</span>(<span class="string">'checkerboard'</span>, <span class="tag">class</span> {<br>
+            &nbsp;&nbsp;<span class="attr">paint</span>(ctx, size) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">const tileSize</span> = <span class="string">20</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">for</span> (let y = 0; y < size.height; y +=tileSize) {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">for</span> (let x = 0; x < size.width; x +=tileSize) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">const color</span> = (x + y) % (tileSize * 2) === 0 ? <span class="string">'#9333ea'</span> : <span class="string">'#a855f7'</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctx.fillStyle = color;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctx.fillRect(x, y, tileSize, tileSize);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;}<br>
+                });<br>
+                <br>
+                <span class="comment">/* ❌ Avoid - Overusing Houdini */</span><br>
+                <span class="tag">*</span> {<br>
+                &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">paint(complex-effect)</span>;<br>
+                &nbsp;&nbsp;<span class="attr">display</span>: <span class="string">layout(custom)</span>;<br>
+                &nbsp;&nbsp;<span class="attr">animation</span>: <span class="string">scroll 1s linear infinite</span>;<br>
+                }
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Gunakan dengan bijak</strong> - Hanya untuk kasus yang memerlukan kontrol tingkat rendah<br>
+          • <strong>Optimasi performa</strong> - Hindari komputasi berat di worklet<br>
+          • <strong>Sediakan fallback</span> - Pastikan situs tetap berfungsi tanpa Houdini<br>
+            • <strong>Test di berbagai browser</span> - Dukungan browser masih terbatas<br>
+              • <strong>Gunakan polyfill</span> - Untuk browser yang belum mendukung
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

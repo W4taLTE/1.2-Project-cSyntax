@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Box Model Demo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>📛 CSS Box Model</h1>
+    <p>Panduan lengkap CSS Box Model untuk memahami layout dan spacing elemen</p>
+  </header>
+  
+  <div class="container">
+    
+    <!-- Elements -->
+    <section class="section">
+      <h2 class="section-title">
+        <span>📌</span>
+        <span>Elements</span>
+      </h2>
+      <div class="info-box">
+        <h4>💡 Konsep Fundamental</h4>
+        <p>CSS Box Model menjelaskan cara browser menghitung ukuran elemen: mulai dari <strong>content</strong>, <strong>padding</strong>, <strong>border</strong>, hingga <strong>margin</strong>.</p>
+      </div>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>box-model.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Content area */</span><br>
+            <span class="tag">.content-box</span> {<br>
+            &nbsp;&nbsp;<span class="attr">width</span>: <span class="string">300px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">height</span>: <span class="string">200px</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* Padding */</span><br>
+            <span class="tag">.with-padding</span> {<br>
+            &nbsp;&nbsp;<span class="attr">padding</span>: <span class="string">20px</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* Border */</span><br>
+            <span class="tag">.with-border</span> {<br>
+            &nbsp;&nbsp;<span class="attr">border</span>: <span class="string">5px solid #9333ea</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* Margin */</span><br>
+            <span class="tag">.with-margin</span> {<br>
+            &nbsp;&nbsp;<span class="attr">margin</span>: <span class="string">15px</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Content</strong> → area tempat teks/gambar berada<br>
+          • <strong>Padding</strong> → jarak antara content dan border<br>
+          • <strong>Border</strong> → garis di sekitar padding & content<br>
+          • <strong>Margin</strong> → jarak antara elemen dengan elemen lain
+        </p>
+      </div>
+    </section>
+    
+    <!-- Features -->
+    <section class="section">
+      <h2 class="section-title">
+        <span>🛠️</span>
+        <span>Features</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>box-sizing.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Default behavior */</span><br>
+            <span class="tag">.default-box</span> {<br>
+            &nbsp;&nbsp;<span class="attr">box-sizing</span>: <span class="string">content-box</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* Include padding & border in size */</span><br>
+            <span class="tag">.better-box</span> {<br>
+            &nbsp;&nbsp;<span class="attr">box-sizing</span>: <span class="string">border-box</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p><code>box-sizing</code> didukung oleh semua browser modern (Chrome 1+, Firefox 1+, Safari 3+, IE 8+).</p>
+      </div>
+    </section>
+    
+    <!-- Basic Tables -->
+    <section class="section">
+      <h2 class="section-title">
+        <span>📊</span>
+        <span>Basic Tables</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>padding-margin.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Padding syntax */</span><br>
+            <span class="tag">padding</span>: <span class="string">10px</span>; <span class="comment">/* all sides */</span><br>
+            <span class="tag">padding</span>: <span class="string">10px 20px</span>; <span class="comment">/* top/bottom, left/right */</span><br>
+            <span class="tag">padding</span>: <span class="string">10px 15px 20px</span>; <span class="comment">/* top, left/right, bottom */</span><br>
+            <span class="tag">padding</span>: <span class="string">5px 10px 15px 20px</span>; <span class="comment">/* top, right, bottom, left */</span><br><br>
+            
+            <span class="comment">/* Margin syntax */</span><br>
+            <span class="tag">margin</span>: <span class="string">auto</span>; <span class="comment">/* center element */</span><br>
+            <span class="tag">margin</span>: <span class="string">0</span>; <span class="comment">/* no margin */</span>
+          </code>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Advanced Table -->
+    <section class="section">
+      <h2 class="section-title">
+        <span>🚀</span>
+        <span>Advanced Table</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-box.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Outline vs Border */</span><br>
+            <span class="tag">.with-outline</span> {<br>
+            &nbsp;&nbsp;<span class="attr">outline</span>: <span class="string">2px dashed #a855f7</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* Overflow control */</span><br>
+            <span class="tag">.overflow-box</span> {<br>
+            &nbsp;&nbsp;<span class="attr">overflow</span>: <span class="string">auto</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Pro Tips -->
+    <section class="section">
+      <h2 class="section-title">
+        <span>💡</span>
+        <span>Pro Tips</span>
+      </h2>
+      
+      <div class="info-box">
+        <h4>🎯 Best Practices</h4>
+        <p>Gunakan <code>box-sizing: border-box;</code> untuk layout yang konsisten dan mudah diatur ukurannya.</p>
+      </div>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>best-practices.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* ✅ Good */</span><br>
+            <span class="tag">*</span> {<br>
+            &nbsp;&nbsp;<span class="attr">box-sizing</span>: <span class="string">border-box</span>;<br>
+            }<br><br>
+            
+            <span class="comment">/* ❌ Avoid fixed height unless necessary */</span><br>
+            <span class="tag">.card</span> {<br>
+            &nbsp;&nbsp;<span class="attr">height</span>: <span class="string">300px</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+    </section>
+    
+  </div>
+</body>
+
+</html>

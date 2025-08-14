@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Responsive Design Demo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>📛 Responsive Design</h1>
+    <p>Panduan lengkap CSS Media Queries untuk desain web responsif</p>
+  </header>
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">
+        <span>📌</span>
+        <span>Elements</span>
+      </h2>
+      <div class="info-box">
+        <h4>💡 Media Query Fundamentals</h4>
+        <p>Media Queries memungkinkan Anda menerapkan CSS berbeda berdasarkan karakteristik perangkat seperti lebar layar, orientasi, dan resolusi.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>responsive.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Breakpoint dasar */</span><br>
+            <span class="tag">@media (max-width: 768px)</span> {<br>
+            &nbsp;&nbsp;<span class="tag">.container</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">padding</span>: <span class="string">1rem</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br><br>
+            <span class="comment">/* Range lebar layar */</span><br>
+            <span class="tag">@media (min-width: 576px) and (max-width: 992px)</span> {<br>
+            &nbsp;&nbsp;<span class="tag">.card</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">width</span>: <span class="string">50%</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br><br>
+            <span class="comment">/* Orientasi perangkat */</span><br>
+            <span class="tag">@media (orientation: portrait)</span> {<br>
+            &nbsp;&nbsp;<span class="tag">.header</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">height</span>: <span class="string">auto</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>@media</code> - <span class="highlight">Aturan</span> untuk menentukan media queries<br>
+          • <code>max-width</code> - <strong>Maksimum</strong> lebar viewport<br>
+          • <code>min-width</code> - <strong>Minimum</strong> lebar viewport<br>
+          • <code>orientation</code> - <strong>Portrait</strong> atau landscape<br>
+          • <code>and</code> - <strong>Kombinasi</strong> multiple conditions
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🛠️</span>
+        <span>Features</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-responsive.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Mobile-first approach */</span><br>
+            <span class="tag">.container</span> {<br>
+            &nbsp;&nbsp;<span class="attr">padding</span>: <span class="string">1rem</span>;<br>
+            }<br><br>
+            <span class="tag">@media (min-width: 768px)</span> {<br>
+            &nbsp;&nbsp;<span class="tag">.container</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">padding</span>: <span class="string">2rem</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br><br>
+            <span class="comment">/* Media query untuk print */</span><br>
+            <span class="tag">@media print</span> {<br>
+            &nbsp;&nbsp;<span class="tag">.navbar</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">display</span>: <span class="string">none</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br><br>
+            <span class="comment">/* Media feature untuk dark mode */</span><br>
+            <span class="tag">@media (prefers-color-scheme: dark)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">--bg-color</span>: <span class="string">#222</span>;<br>
+            &nbsp;&nbsp;<span class="attr">--text-color</span>: <span class="string">#fff</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Media Queries didukung di semua browser modern (Chrome 29+, Firefox 23+, Safari 9+, Edge 12+). Fitur prefers-color-scheme didukung Chrome 76+, Firefox 67+, Safari 12.1+.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>📊</span>
+        <span>Basic Tables</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>media-query-values.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Common Breakpoints (px) */</span><br>
+            <span class="tag">Mobile</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* <576px */</span><br>
+                <span class="tag">Tablet</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* 576-992 */</span><br>
+                <span class="tag">Desktop</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* 992-1200 */</span><br>
+                <span class="tag">Large Desktop</span> <span class="comment">/* >1200 */</span><br><br>
+                <span class="comment">/* Media Features */</span><br>
+                <span class="tag">width</span>, <span class="tag">height</span> &nbsp;&nbsp;<span class="comment">/* Dimensi viewport */</span><br>
+                <span class="tag">aspect-ratio</span> &nbsp;<span class="comment">/* Rasio width/height */</span><br>
+                <span class="tag">orientation</span> &nbsp;<span class="comment">/* Portrait/landscape */</span><br>
+                <span class="tag">resolution</span> &nbsp;&nbsp;<span class="comment">/* Kepadatan piksel */</span><br>
+                <span class="tag">hover</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Dukungan hover */</span>
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Breakpoints umum</strong> - Mobile (540px), Tablet (720px), Desktop (960px)<br>
+          • <strong>Pixel ratio</strong> - Untuk layar retina (@2x, @3x)<br>
+          • <span class="highlight">prefers-reduced-motion</span> - Untuk pengguna yang sensitif terhadap animasi<br>
+          • <span class="highlight">hover/pointer</span> - Deteksi jenis perangkat input<br>
+          • Gunakan unit relatif (em, rem, %) daripada piksel absolut
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🚀</span>
+        <span>Advanced Table</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-responsive.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* CSS Grid dengan media queries */</span><br>
+            <span class="tag">@media (min-width: 768px)</span> {<br>
+            &nbsp;&nbsp;<span class="tag">.grid-container</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">display</span>: <span class="string">grid</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">grid-template-columns</span>: <span class="string">repeat(auto-fit, minmax(300px, 1fr))</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br><br>
+            <span class="comment">/* Media query bersarang */</span><br>
+            <span class="tag">@supports (display: grid)</span> {<br>
+            &nbsp;&nbsp;<span class="tag">@media (min-width: 1024px)</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">main</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">display</span>: <span class="string">grid</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">grid-template-columns</span>: <span class="string">1fr 3fr</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;}<br>
+            }<br><br>
+            <span class="comment">/* Media query untuk JavaScript */</span><br>
+            <span class="tag">const mq = window.matchMedia('(min-width: 768px)')</span>;<br>
+            <span class="tag">if (mq.matches) { console.log('Desktop view') }</span>;
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Grid dengan media queries didukung di semua browser modern. Fitur matchMedia() didukung di Chrome 9+, Firefox 6+, Safari 5.1+, Edge 12+.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>💡</span>
+        <span>Pro Tips</span>
+      </h2>
+      <div class="info-box">
+        <h4>🎯 Best Practices</h4>
+        <p>Gunakan pendekatan mobile-first dan media queries untuk membangun pengalaman yang responsif.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>best-practices.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* ✅ Good - Mobile first approach */</span><br>
+            <span class="tag">.container</span> {<br>
+            &nbsp;&nbsp;<span class="attr">padding</span>: <span class="string">1rem</span>;<br>
+            }<br><br>
+            <span class="tag">@media (min-width: 768px)</span> {<br>
+            &nbsp;&nbsp;<span class="tag">.container</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">padding</span>: <span class="string">2rem</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br><br>
+            <span class="comment">/* ❌ Avoid - Desktop first */</span><br>
+            <span class="tag">.container</span> {<br>
+            &nbsp;&nbsp;<span class="attr">padding</span>: <span class="string">2rem</span>;<br>
+            }<br><br>
+            <span class="tag">@media (max-width: 767px)</span> {<br>
+            &nbsp;&nbsp;<span class="tag">.container</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">padding</span>: <span class="string">1rem</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br><br>
+            <span class="comment">/* ✅ Good - Logical breakpoints */</span><br>
+            <span class="tag">@media (min-width: 40em)</span> {<br>
+            &nbsp;&nbsp;<span class="tag">.content</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">max-width</span>: <span class="string">75ch</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Mobile-first</strong> - Mulai dari small screens baru ke larger screens<br>
+          • <strong>Gunakan em/rem</strong> - Lebih aksesibel daripada px untuk breakpoints<br>
+          • <strong>Minimal breakpoints</strong> - Gunakan hanya saat diperlukan<br>
+          • <strong>Content-based breakpoints</strong> - Sesuaikan dengan konten bukan perangkat<br>
+          • <strong>Test berbagai perangkat</strong> - Jangan hanya bergantung pada ukuran viewport
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

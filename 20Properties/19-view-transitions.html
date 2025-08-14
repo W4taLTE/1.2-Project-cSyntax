@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Transitions API Demo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>📛 View Transitions API</h1>
+    <p>Panduan lengkap View Transitions API untuk animasi transisi yang mulus</p>
+  </header>
+  
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">
+        <span>📌</span>
+        <span>Elements</span>
+      </h2>
+      
+      <div class="info-box">
+        <h4>💡 View Transitions Fundamental</h4>
+        <p>View Transitions API memungkinkan animasi transisi mulus antara berbagai tampilan/tampilan situs web dengan kontrol penuh melalui CSS dan JavaScript.</p>
+      </div>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>view-transitions.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Basic View Transition */</span><br>
+            <span class="tag">html</span> {<br>
+            &nbsp;&nbsp;<span class="attr">view-transition-name</span>: <span class="string">none</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* Named transition for specific element */</span><br>
+            <span class="tag">.header</span> {<br>
+            &nbsp;&nbsp;<span class="attr">view-transition-name</span>: <span class="string">header</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* Transition animation */</span><br>
+            <span class="tag">::view-transition-old(root)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">animation</span>: <span class="string">fade-out 0.3s ease forwards</span>;<br>
+            }<br>
+            <br>
+            <span class="tag">::view-transition-new(root)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">animation</span>: <span class="string">fade-in 0.3s ease forwards</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>view-transition-name</code> - <span class="highlight">Mengidentifikasi elemen</span> untuk animasi transisi<br>
+          • <code>::view-transition-old()</code> - <strong>Mewakili tampilan lama</strong> yang keluar<br>
+          • <code>::view-transition-new()</code> - <strong>Mewakili tampilan baru</strong> yang masuk<br>
+          • <code>document.startViewTransition()</code> - API JavaScript untuk memulai transisi
+        </p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>🛠️</span>
+        <span>Features</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>view-features.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Basic page transition */</span><br>
+            <span class="tag">::view-transition-old(root)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">animation</span>: <span class="string">fade-out 0.3s ease</span>;<br>
+            }<br>
+            <br>
+            <span class="tag">::view-transition-new(root)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">animation</span>: <span class="string">fade-in 0.3s ease</span>;<br>
+            &nbsp;&nbsp;<span class="attr">animation-delay</span>: <span class="string">0.3s</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* Custom element transition */</span><br>
+            <span class="tag">.main-image</span> {<br>
+            &nbsp;&nbsp;<span class="attr">view-transition-name</span>: <span class="string">main-image</span>;<br>
+            }<br>
+            <br>
+            <span class="tag">::view-transition-group(main-image)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">animation-duration</span>: <span class="string">0.5s</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>View Transitions API didukung di Chrome 111+, Edge 111+, Opera 97+. Firefox dan Safari belum mendukung secara native (per 2023).</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>📊</span>
+        <span>Basic Tables</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>view-values.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* view-transition-name Values */</span><br>
+            <span class="tag">none</span> <span class="comment">/* Default, tidak ada transisi */</span><br>
+            <span class="tag">&lt;custom-ident&gt;</span> <span class="comment">/* Nama custom untuk elemen */</span><br>
+            <br>
+            <span class="comment">/* Pseudo-elements untuk animasi */</span><br>
+            <span class="tag">::view-transition</span> <span class="comment">/* Root pseudo-element */</span><br>
+            <span class="tag">::view-transition-group()</span> <span class="comment">/* Grup elemen terkait */</span><br>
+            <span class="tag">::view-transition-image-pair()</span> <span class="comment">/* Pasangan old/new */</span><br>
+            <span class="tag">::view-transition-old()</span> <span class="comment">/* State sebelumnya */</span><br>
+            <span class="tag">::view-transition-new()</span> <span class="comment">/* State baru */</span><br>
+            <br>
+            <span class="comment">/* Jenis Transisi Umum */</span><br>
+            <span class="tag">fade</span> <span class="comment">/* Memudar */</span><br>
+            <span class="tag">slide</span> <span class="comment">/* Geser */</span><br>
+            <span class="tag">scale</span> <span class="comment">/* Perubahan ukuran */</span>
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>View Transition Groups</strong> - Mengelompokkan elemen terkait dalam transisi<br>
+          • <strong>Image Pairs</strong> - Menghubungkan state old dan new dari elemen<br>
+          • <strong>Custom Animations</strong> - Bisa menggunakan keyframes CSS standar<br>
+          • <strong>Fallbacks</strong> - Selalu sediakan fallback untuk browser yang tidak mendukung
+        </p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>🚀</span>
+        <span>Advanced Table</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-view.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Multiple named transitions */</span><br>
+            <span class="tag">.product-image</span> {<br>
+            &nbsp;&nbsp;<span class="attr">view-transition-name</span>: <span class="string">product-image</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* Custom animation */</span><br>
+            <span class="tag">::view-transition-group(product-image)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">animation-duration</span>: <span class="string">0.5s</span>;<br>
+            &nbsp;&nbsp;<span class="attr">animation-timing-function</span>: <span class="string">cubic-bezier(0.22, 1, 0.36, 1)</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* Different animations for in/out */</span><br>
+            <span class="tag">::view-transition-old(product-image)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">animation</span>: <span class="string">slide-out 0.5s ease</span>;<br>
+            }<br>
+            <br>
+            <span class="tag">::view-transition-new(product-image)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">animation</span>: <span class="string">slide-in 0.5s ease</span>;<br>
+            &nbsp;&nbsp;<span class="attr">animation-delay</span>: <span class="string">0.1s</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* Zustand management */</span><br>
+            <span class="tag">::view-transition-old(details)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">mix-blend-mode</span>: <span class="string">normal</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <h4>ℹ️ Advanced Support</h4>
+        <p>Fitur lanjutan seperti multiple named transitions dan animation customization membutuhkan Chrome 115+ dengan flag experimental Web Platform Features.</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>💡</span>
+        <span>Pro Tips</span>
+      </h2>
+      
+      <div class="info-box">
+        <h4>🎯 Best Practices</h4>
+        <p>Gunakan View Transitions untuk meningkatkan UX, bukan sekadar efek visual. Pastikan konten tetap mudah diakses dan performa tidak terganggu.</p>
+      </div>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>best-practices.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* ✅ Good - Simple and effective */</span><br>
+            <span class="tag">::view-transition-old(root)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">animation</span>: <span class="string">fade-out 0.2s ease</span>;<br>
+            }<br>
+            <br>
+            <span class="tag">::view-transition-new(root)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">animation</span>: <span class="string">fade-in 0.2s ease</span>;<br>
+            &nbsp;&nbsp;<span class="attr">animation-delay</span>: <span class="string">0.2s</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* ✅ Good - Named element transition */</span><br>
+            <span class="tag">.hero-image</span> {<br>
+            &nbsp;&nbsp;<span class="attr">view-transition-name</span>: <span class="string">hero</span>;<br>
+            &nbsp;&nbsp;<span class="attr">contain</span>: <span class="string">paint</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* ❌ Avoid - Overusing transitions */</span><br>
+            <span class="tag">*</span> {<br>
+            &nbsp;&nbsp;<span class="attr">view-transition-name</span>: <span class="string">transition-all</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* ❌ Avoid - Long animations */</span><br>
+            <span class="tag">::view-transition-old(root)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">animation</span>: <span class="string">fancy-out 2s</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Gunakan dengan bijak</strong> - Hanya untuk transisi yang meningkatkan UX<br>
+          • <strong>Durasi pendek</strong> - 200-500ms ideal untuk kebanyakan kasus<br>
+          • <strong>Optimasi performa</strong> - Hindari animasi yang berat/complex<br>
+          • <strong>Sediakan fallback</span> - Pastikan situs tetap berfungsi tanpa transisi<br>
+            • <strong>Test di berbagai device</strong> - Animasi mungkin berbeda di perangkat berbeda
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

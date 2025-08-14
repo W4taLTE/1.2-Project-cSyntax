@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transitions Demo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>📛 CSS Transitions</h1>
+    <p>Panduan lengkap CSS Transitions untuk animasi web yang halus</p>
+  </header>
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">
+        <span>📌</span>
+        <span>Elements</span>
+      </h2>
+      <div class="info-box">
+        <h4>💡 Transition Fundamentals</h4>
+        <p>CSS Transitions memungkinkan Anda mengubah nilai properti secara halus selama durasi tertentu, menciptakan efek animasi yang smooth.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>transitions.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Transition dasar */</span><br>
+            <span class="tag">.box</span> {<br>
+            &nbsp;&nbsp;<span class="attr">width</span>: <span class="string">100px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">height</span>: <span class="string">100px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">#9333ea</span>;<br>
+            &nbsp;&nbsp;<span class="attr">transition</span>: <span class="string">all 0.3s ease</span>;<br>
+            }<br><br>
+            <span class="tag">.box:hover</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">#a855f7</span>;<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">scale(1.1)</span>;<br>
+            }<br><br>
+            <span class="comment">/* Multiple transitions */</span><br>
+            <span class="tag">.button</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transition</span>: <span class="string">background 0.2s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>transition-property</code> - <span class="highlight">Properti</span> yang akan dianimasikan<br>
+          • <code>transition-duration</code> - <strong>Durasi</strong> animasi (contoh: 0.3s)<br>
+          • <code>transition-timing-function</code> - <strong>Fungsi waktu</strong> (ease, linear, cubic-bezier)<br>
+          • <code>transition-delay</code> - <strong>Penundaan</strong> sebelum animasi dimulai<br>
+          • <code>transition</code> - <strong>Shorthand</strong> untuk semua properti di atas
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🛠️</span>
+        <span>Features</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-transitions.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Animasi transformasi 3D */</span><br>
+            <span class="tag">.card</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transition</span>: <span class="string">transform 0.5s ease-in-out</span>;<br>
+            }<br><br>
+            <span class="tag">.card:hover</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">rotateY(180deg) scale(1.05)</span>;<br>
+            }<br><br>
+            <span class="comment">/* Animasi dengan delay */</span><br>
+            <span class="tag">.menu-item</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transition</span>: <span class="string">opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s</span>;<br>
+            &nbsp;&nbsp;<span class="attr">opacity</span>: <span class="string">0</span>;<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">translateY(20px)</span>;<br>
+            }<br><br>
+            <span class="tag">.menu:hover .menu-item</span> {<br>
+            &nbsp;&nbsp;<span class="attr">opacity</span>: <span class="string">1</span>;<br>
+            &nbsp;&nbsp;<span class="attr">transform</span>: <span class="string">translateY(0)</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>CSS Transitions didukung di semua browser modern (Chrome 26+, Firefox 16+, Safari 6.1+, Edge 12+, Opera 12.1+). Untuk IE10+, gunakan prefix -ms-.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>📊</span>
+        <span>Basic Tables</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>transition-values.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Timing Functions */</span><br>
+            <span class="tag">ease</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Default (slow start, fast, slow end) */</span><br>
+            <span class="tag">linear</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Kecepatan konstan */</span><br>
+            <span class="tag">ease-in</span> &nbsp;&nbsp;&nbsp;<span class="comment">/* Slow start */</span><br>
+            <span class="tag">ease-out</span> &nbsp;&nbsp;<span class="comment">/* Slow end */</span><br>
+            <span class="tag">ease-in-out</span> <span class="comment">/* Slow start and end */</span><br>
+            <span class="tag">cubic-bezier()</span> <span class="comment">/* Fungsi kustom */</span><br><br>
+            <span class="comment">/* Common Durations */</span><br>
+            <span class="tag">0.2s</span> &nbsp;&nbsp;<span class="comment">/* Animasi cepat */</span><br>
+            <span class="tag">0.3s</span> &nbsp;&nbsp;<span class="comment">/* Standar */</span><br>
+            <span class="tag">0.5s</span> &nbsp;&nbsp;<span class="comment">/* Animasi lebih lambat */</span><br>
+            <span class="tag">1s</span> &nbsp;&nbsp;&nbsp;<span class="comment">/* Animasi panjang */</span>
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Timing Functions</strong> - Mengontrol percepatan animasi<br>
+          • <strong>Durations</strong> - Waktu yang dibutuhkan animasi untuk selesai<br>
+          • <span class="highlight">cubic-bezier()</span> - Memungkinkan pembuatan kurva waktu kustom<br>
+          • <span class="highlight">steps()</span> - Animasi dengan langkah diskrit (bukan smooth)<br>
+          • Nilai durasi antara 100ms-300ms biasanya ideal untuk interaksi pengguna
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🚀</span>
+        <span>Advanced Table</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-transitions.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Transition dengan JavaScript */</span><br>
+            <span class="tag">element.style.transition = 'all 0.3s ease'</span>;<br>
+            <span class="tag">element.style.backgroundColor = '#9333ea'</span>;<br><br>
+            <span class="comment">/* Transition events */</span><br>
+            <span class="tag">element.addEventListener('transitionend', () => {</span><br>
+            &nbsp;&nbsp;<span class="tag">console.log('Transition ended')</span>;<br>
+            <span class="tag">})</span>;<br><br>
+            <span class="comment">/* Animasi height: auto */</span><br>
+            <span class="tag">.accordion-content</span> {<br>
+            &nbsp;&nbsp;<span class="attr">max-height</span>: <span class="string">0</span>;<br>
+            &nbsp;&nbsp;<span class="attr">overflow</span>: <span class="string">hidden</span>;<br>
+            &nbsp;&nbsp;<span class="attr">transition</span>: <span class="string">max-height 0.3s ease</span>;<br>
+            }<br><br>
+            <span class="tag">.accordion-content.open</span> {<br>
+            &nbsp;&nbsp;<span class="attr">max-height</span>: <span class="string">1000px</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Transition events didukung di semua browser modern. Untuk animasi height/width, gunakan max-height/max-width atau transform: scale() untuk performa lebih baik.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>💡</span>
+        <span>Pro Tips</span>
+      </h2>
+      <div class="info-box">
+        <h4>🎯 Best Practices</h4>
+        <p>Gunakan transitions untuk meningkatkan pengalaman pengguna dengan animasi yang halus dan performant.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>best-practices.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* ✅ Good - Performant properties */</span><br>
+            <span class="tag">.element</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transition</span>: <span class="string">transform 0.3s ease, opacity 0.3s ease</span>;<br>
+            }<br><br>
+            <span class="comment">/* ❌ Avoid - Heavy animations */</span><br>
+            <span class="tag">.element</span> {<br>
+            &nbsp;&nbsp;<span class="attr">transition</span>: <span class="string">all 0.3s ease</span>;<br>
+            &nbsp;&nbsp;<span class="attr">width</span>: <span class="string">100px</span>;<br>
+            }<br><br>
+            <span class="comment">/* ✅ Good - Will-change optimization */</span><br>
+            <span class="tag">.animated-element</span> {<br>
+            &nbsp;&nbsp;<span class="attr">will-change</span>: <span class="string">transform, opacity</span>;<br>
+            }<br><br>
+            <span class="comment">/* ❌ Avoid - Overusing will-change */</span><br>
+            <span class="tag">*</span> {<br>
+            &nbsp;&nbsp;<span class="attr">will-change</span>: <span class="string">all</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Animasikan properti yang ringan</strong> - transform dan opacity paling efisien<br>
+          • <strong>Hindari animasi layout properties</strong> - margin, padding, width/height<br>
+          • <strong>Gunakan will-change dengan bijak</strong> - Hanya untuk elemen yang benar-benar berubah<br>
+          • <strong>Batasi jumlah animasi</strong> - Terlalu banyak animasi membingungkan pengguna<br>
+          • <strong>Gunakan prefers-reduced-motion</strong> - Hormati preferensi pengguna
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

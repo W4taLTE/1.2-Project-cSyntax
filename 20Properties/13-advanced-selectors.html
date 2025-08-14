@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced CSS Selectors Demo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>📛 Advanced Selectors</h1>
+    <p>Panduan lengkap CSS Advanced Selectors untuk seleksi elemen yang lebih presisi</p>
+  </header>
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">
+        <span>📌</span>
+        <span>Elements</span>
+      </h2>
+      <div class="info-box">
+        <h4>💡 Advanced Selector Fundamentals</h4>
+        <p>Advanced Selectors memungkinkan Anda memilih elemen dengan lebih spesifik berdasarkan hubungan, atribut, atau kondisi tertentu.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-selectors.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Attribute Selector */</span><br>
+            <span class="tag">input[type="text"]</span> {<br>
+            &nbsp;&nbsp;<span class="attr">border</span>: <span class="string">2px solid #9333ea</span>;<br>
+            }<br><br>
+            <span class="comment">/* Child Combinator */</span><br>
+            <span class="tag">ul > li</span> {<br>
+            &nbsp;&nbsp;<span class="attr">list-style-type</span>: <span class="string">none</span>;<br>
+            }<br><br>
+            <span class="comment">/* General Sibling */</span><br>
+            <span class="tag">h2 ~ p</span> {<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">#a855f7</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>[attribute]</code> - Memilih elemen berdasarkan atribut<br>
+          • <code>></code> - Child combinator memilih elemen anak langsung<br>
+          • <code>~</code> - General sibling memilih semua saudara berikutnya<br>
+          • <code>+</code> - Adjacent sibling memilih saudara berikutnya langsung
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🛠️</span>
+        <span>Features</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>attribute-selectors.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Attribute Starts With */</span><br>
+            <span class="tag">a[href^="https"]</span> {<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">#4CAF50</span>;<br>
+            }<br><br>
+            <span class="comment">/* Attribute Ends With */</span><br>
+            <span class="tag">a[href$=".pdf"]</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">url('pdf-icon.png')</span>;<br>
+            }<br><br>
+            <span class="comment">/* Attribute Contains */</span><br>
+            <span class="tag">img[src*="logo"]</span> {<br>
+            &nbsp;&nbsp;<span class="attr">border</span>: <span class="string">1px solid #9333ea</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Attribute Selectors didukung penuh di Chrome 1+, Firefox 1+, Safari 3+, IE 7+. Advanced selectors bekerja di semua browser modern.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>📊</span>
+        <span>Basic Tables</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>combinators.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Descendant Selector */</span><br>
+            <span class="tag">.container p</span> {<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">#e0e0e0</span>;<br>
+            }<br><br>
+            <span class="comment">/* Child Selector */</span><br>
+            <span class="tag">nav > ul</span> {<br>
+            &nbsp;&nbsp;<span class="attr">padding-left</span>: <span class="string">0</span>;<br>
+            }<br><br>
+            <span class="comment">/* Adjacent Sibling */</span><br>
+            <span class="tag">h2 + p</span> {<br>
+            &nbsp;&nbsp;<span class="attr">margin-top</span>: <span class="string">0</span>;<br>
+            }<br><br>
+            <span class="comment">/* General Sibling */</span><br>
+            <span class="tag">h2 ~ p</span> {<br>
+            &nbsp;&nbsp;<span class="attr">font-weight</span>: <span class="string">bold</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>A B</code> - Memilih semua B yang merupakan keturunan A<br>
+          • <code>A > B</code> - Memilih B yang merupakan anak langsung A<br>
+          • <code>A + B</code> - Memilih B yang langsung mengikuti A<br>
+          • <code>A ~ B</code> - Memilih semua B yang mengikuti A (saudara)
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🚀</span>
+        <span>Advanced Table</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>pseudo-selectors.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Structural Pseudo-classes */</span><br>
+            <span class="tag">li:nth-child(2n+1)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">rgba(147, 51, 234, 0.1)</span>;<br>
+            }<br><br>
+            <span class="tag">tr:nth-of-type(even)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">#f5f5f5</span>;<br>
+            }<br><br>
+            <span class="tag">p:first-of-type</span> {<br>
+            &nbsp;&nbsp;<span class="attr">font-weight</span>: <span class="string">bold</span>;<br>
+            }<br><br>
+            <span class="tag">:not(.ignore)</span> {<br>
+            &nbsp;&nbsp;<span class="attr">opacity</span>: <span class="string">0.9</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Structural pseudo-classes: Chrome 1+, Firefox 3.5+, Safari 3.1+, IE 9+. :not() selector: Chrome 1+, Firefox 3.5+, Safari 3.1+, IE 9+.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>💡</span>
+        <span>Pro Tips</span>
+      </h2>
+      <div class="info-box">
+        <h4>🎯 Best Practices</h4>
+        <p>Gunakan advanced selectors untuk membuat CSS Anda lebih efisien dan maintainable, tetapi hindari kompleksitas yang tidak perlu.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>best-practices.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* ✅ Good - Specific but readable */</span><br>
+            <span class="tag">nav[role="main"] > ul > li > a</span> {<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">#9333ea</span>;<br>
+            }<br><br>
+            <span class="comment">/* ✅ Good - Using :where() for lower specificity */</span><br>
+            <span class="tag">:where(section, article) h2</span> {<br>
+            &nbsp;&nbsp;<span class="attr">font-size</span>: <span class="string">1.8rem</span>;<br>
+            }<br><br>
+            <span class="comment">/* ❌ Avoid - Too complex */</span><br>
+            <span class="tag">body > div:first-child > main > section:nth-of-type(3) > div > p:first-of-type</span> {<br>
+            &nbsp;&nbsp;<span class="attr">color</span>: <span class="string">red</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Prioritaskan readability</strong> - Selector harus mudah dipahami<br>
+          • <strong>Gunakan :where()</strong> - Untuk mengurangi specificity ketika memungkinkan<br>
+          • <strong>Hindari over-qualifying</strong> - Jangan membuat rantai selector yang terlalu panjang<br>
+          • <strong>Manfaatkan attribute selectors</strong> - Untuk seleksi berbasis atribut yang fleksibel
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

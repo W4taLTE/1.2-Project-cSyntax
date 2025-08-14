@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Masking & Shapes Demo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>📛 Masking & Shapes</h1>
+    <p>Panduan lengkap CSS Masking & Shapes untuk efek visual kreatif</p>
+  </header>
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">
+        <span>📌</span>
+        <span>Elements</span>
+      </h2>
+      <div class="info-box">
+        <h4>💡 Masking & Shape Fundamentals</h4>
+        <p>CSS Masking & Shapes memungkinkan Anda membuat efek visual kompleks dengan menutupi bagian elemen atau mengubah bentuk aliran konten.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>mask-shape.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Basic Clip Path */</span><br>
+            <span class="tag">.clipped</span> {<br>
+            &nbsp;&nbsp;<span class="attr">clip-path</span>: <span class="string">circle(50% at 50% 50%)</span>;<br>
+            }<br><br>
+            <span class="comment">/* Image Mask */</span><br>
+            <span class="tag">.masked</span> {<br>
+            &nbsp;&nbsp;<span class="attr">mask-image</span>: <span class="string">url('mask.png')</span>;<br>
+            &nbsp;&nbsp;<span class="attr">mask-size</span>: <span class="string">cover</span>;<br>
+            }<br><br>
+            <span class="comment">/* Shape Outside */</span><br>
+            <span class="tag">.shape</span> {<br>
+            &nbsp;&nbsp;<span class="attr">shape-outside</span>: <span class="string">polygon(0 0, 100% 0, 100% 100%)</span>;<br>
+            &nbsp;&nbsp;<span class="attr">float</span>: <span class="string">left</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>clip-path</code> - Memotong elemen menjadi bentuk tertentu<br>
+          • <code>mask-image</code> - Menerapkan mask menggunakan gambar/SVG<br>
+          • <code>shape-outside</code> - Mengubah aliran konten di sekitar elemen<br>
+          • <code>shape-margin</span> - Menambahkan margin pada shape
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🛠️</span>
+        <span>Features</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-masking.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Complex Clip Path */</span><br>
+            <span class="tag">.complex-clip</span> {<br>
+            &nbsp;&nbsp;<span class="attr">clip-path</span>: <span class="string">path('M10,10 L100,50 L50,100 Z')</span>;<br>
+            }<br><br>
+            <span class="comment">/* Gradient Mask */</span><br>
+            <span class="tag">.gradient-mask</span> {<br>
+            &nbsp;&nbsp;<span class="attr">mask-image</span>: <span class="string">linear-gradient(to right, black, transparent)</span>;<br>
+            }<br><br>
+            <span class="comment">/* Circle Shape */</span><br>
+            <span class="tag">.circle-shape</span> {<br>
+            &nbsp;&nbsp;<span class="attr">shape-outside</span>: <span class="string">circle(50%)</span>;<br>
+            &nbsp;&nbsp;<span class="attr">width</span>: <span class="string">200px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">height</span>: <span class="string">200px</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Clip-path: Chrome 55+, Firefox 54+, Safari 9.1+, Edge 79+. Shape-outside: Chrome 37+, Firefox 62+, Safari 10.1+, Edge 79+.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>📊</span>
+        <span>Basic Tables</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>shape-values.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Basic Shape Functions */</span><br>
+            <span class="tag">.circle</span> {<br>
+            &nbsp;&nbsp;<span class="attr">clip-path</span>: <span class="string">circle(50% at center)</span>;<br>
+            }<br><br>
+            <span class="tag">.ellipse</span> {<br>
+            &nbsp;&nbsp;<span class="attr">clip-path</span>: <span class="string">ellipse(25% 40% at 50% 50%)</span>;<br>
+            }<br><br>
+            <span class="tag">.polygon</span> {<br>
+            &nbsp;&nbsp;<span class="attr">clip-path</span>: <span class="string">polygon(0% 0%, 100% 0%, 50% 100%)</span>;<br>
+            }<br><br>
+            <span class="tag">.inset</span> {<br>
+            &nbsp;&nbsp;<span class="attr">clip-path</span>: <span class="string">inset(10% 20% 30% 40%)</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>circle()</code> - Membuat bentuk lingkaran<br>
+          • <code>ellipse()</code> - Membuat bentuk elips<br>
+          • <code>polygon()</code> - Membuat bentuk poligon kustom<br>
+          • <code>inset()</code> - Memotong bagian dalam elemen<br>
+          • <code>path()</code> - Menggunakan path SVG untuk bentuk kompleks
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>🚀</span>
+        <span>Advanced Table</span>
+      </h2>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-shapes.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Multiple Masks */</span><br>
+            <span class="tag">.complex-mask</span> {<br>
+            &nbsp;&nbsp;<span class="attr">mask-image</span>: <span class="string">url('mask1.png'), url('mask2.png')</span>;<br>
+            &nbsp;&nbsp;<span class="attr">mask-composite</span>: <span class="string">exclude</span>;<br>
+            }<br><br>
+            <span class="comment">/* Shape with Margin */</span><br>
+            <span class="tag">.text-flow</span> {<br>
+            &nbsp;&nbsp;<span class="attr">shape-outside</span>: <span class="string">url('shape.png')</span>;<br>
+            &nbsp;&nbsp;<span class="attr">shape-margin</span>: <span class="string">20px</span>;<br>
+            }<br><br>
+            <span class="comment">/* Animated Clip Path */</span><br>
+            <span class="tag">.morphing-shape</span> {<br>
+            &nbsp;&nbsp;<span class="attr">clip-path</span>: <span class="string">polygon(0% 0%, 100% 0%, 100% 100%)</span>;<br>
+            &nbsp;&nbsp;<span class="attr">transition</span>: <span class="string">clip-path 0.5s ease</span>;<br>
+            }<br>
+            <span class="tag">.morphing-shape:hover</span> {<br>
+            &nbsp;&nbsp;<span class="attr">clip-path</span>: <span class="string">polygon(50% 0%, 0% 100%, 100% 100%)</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>Mask-composite: Chrome 73+, Firefox 53+, Safari 12.1+. Animated clip-path: Chrome 55+, Firefox 54+, Safari 12.1+.</p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">
+        <span>💡</span>
+        <span>Pro Tips</span>
+      </h2>
+      <div class="info-box">
+        <h4>🎯 Best Practices</h4>
+        <p>Gunakan masking dan shapes untuk efek kreatif, tetapi selalu pertimbangkan fallback untuk browser yang tidak mendukung.</p>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>best-practices.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* ✅ Good - With fallback */</span><br>
+            <span class="tag">.image-container</span> {<br>
+            &nbsp;&nbsp;<span class="attr">border-radius</span>: <span class="string">50%</span>; <span class="comment">/* Fallback */</span><br>
+            &nbsp;&nbsp;<span class="attr">clip-path</span>: <span class="string">circle(50% at center)</span>;<br>
+            }<br><br>
+            <span class="comment">/* ✅ Good - Using @supports */</span><br>
+            <span class="tag">@supports (shape-outside: circle())</span> {<br>
+            &nbsp;&nbsp;<span class="tag">.advanced-shape</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">shape-outside</span>: <span class="string">circle(50%)</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br><br>
+            <span class="comment">/* ❌ Avoid - Overusing complex shapes */</span><br>
+            <span class="tag">body > *</span> {<br>
+            &nbsp;&nbsp;<span class="attr">clip-path</span>: <span class="string">polygon(0% 0%, 100% 0%, 100% 100%)</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Sediakan fallback</strong> - Gunakan border-radius sebagai fallback untuk clip-path<br>
+          • <strong>Gunakan @supports</strong> - Untuk fitur lanjutan yang mungkin tidak didukung semua browser<br>
+          • <strong>Optimalkan performa</strong> - Shape kompleks bisa mempengaruhi rendering<br>
+          • <strong>Pertahankan aksesibilitas</strong> - Pastikan konten tetap terbaca setelah diterapkan masking
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

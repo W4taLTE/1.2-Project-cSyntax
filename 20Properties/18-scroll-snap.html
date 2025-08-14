@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Scroll Snap Demo</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>📛 CSS Scroll Snap</h1>
+    <p>Panduan lengkap CSS Scroll Snap untuk membuat scroll yang presisi</p>
+  </header>
+  
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">
+        <span>📌</span>
+        <span>Elements</span>
+      </h2>
+      
+      <div class="info-box">
+        <h4>💡 Scroll Snap Fundamental</h4>
+        <p>CSS Scroll Snap memungkinkan Anda membuat scroll yang "snap" ke posisi tertentu, ideal untuk galeri, carousel, dan tampilan halaman penuh.</p>
+      </div>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>scroll-snap.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Container Properties */</span><br>
+            <span class="tag">.scroll-container</span> {<br>
+            &nbsp;&nbsp;<span class="attr">scroll-snap-type</span>: <span class="string">y mandatory</span>;<br>
+            &nbsp;&nbsp;<span class="attr">overflow-y</span>: <span class="string">scroll</span>;<br>
+            &nbsp;&nbsp;<span class="attr">height</span>: <span class="string">100vh</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* Child Elements */</span><br>
+            <span class="tag">.scroll-item</span> {<br>
+            &nbsp;&nbsp;<span class="attr">scroll-snap-align</span>: <span class="string">start</span>;<br>
+            &nbsp;&nbsp;<span class="attr">height</span>: <span class="string">100vh</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* Horizontal Example */</span><br>
+            <span class="tag">.horizontal-scroll</span> {<br>
+            &nbsp;&nbsp;<span class="attr">scroll-snap-type</span>: <span class="string">x mandatory</span>;<br>
+            &nbsp;&nbsp;<span class="attr">overflow-x</span>: <span class="string">scroll</span>;<br>
+            &nbsp;&nbsp;<span class="attr">display</span>: <span class="string">flex</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <code>scroll-snap-type</code> - <span class="highlight">Container property</span> menentukan perilaku snap<br>
+          • <code>scroll-snap-align</code> - <strong>Child property</strong> menentukan posisi snap<br>
+          • <code>scroll-snap-stop</code> - Mengontrol apakah scroll melewati item<br>
+          • <code>scroll-margin</code>/<code>scroll-padding</code> - Menyesuaikan area snap
+        </p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>🛠️</span>
+        <span>Features</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>scroll-implement.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Full page scroll */</span><br>
+            <span class="tag">html</span> {<br>
+            &nbsp;&nbsp;<span class="attr">scroll-snap-type</span>: <span class="string">y proximity</span>;<br>
+            }<br>
+            <br>
+            <span class="tag">section</span> {<br>
+            &nbsp;&nbsp;<span class="attr">scroll-snap-align</span>: <span class="string">start</span>;<br>
+            &nbsp;&nbsp;<span class="attr">height</span>: <span class="string">100vh</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* Image carousel */</span><br>
+            <span class="tag">.carousel</span> {<br>
+            &nbsp;&nbsp;<span class="attr">scroll-snap-type</span>: <span class="string">x mandatory</span>;<br>
+            &nbsp;&nbsp;<span class="attr">display</span>: <span class="string">flex</span>;<br>
+            &nbsp;&nbsp;<span class="attr">overflow-x</span>: <span class="string">auto</span>;<br>
+            }<br>
+            <br>
+            <span class="tag">.carousel img</span> {<br>
+            &nbsp;&nbsp;<span class="attr">scroll-snap-align</span>: <span class="string">center</span>;<br>
+            &nbsp;&nbsp;<span class="attr">min-width</span>: <span class="string">100%</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <h4>ℹ️ Browser Support</h4>
+        <p>CSS Scroll Snap didukung di Chrome 69+, Firefox 68+, Safari 11+, Edge 79+. Beberapa properti baru mungkin memerlukan prefix -webkit- untuk Safari.</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>📊</span>
+        <span>Basic Tables</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>scroll-values.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* scroll-snap-type Values */</span><br>
+            <span class="tag">none</span> <span class="comment">/* Default, no snapping */</span><br>
+            <span class="tag">x</span> <span class="comment">/* Horizontal axis */</span><br>
+            <span class="tag">y</span> <span class="comment">/* Vertical axis */</span><br>
+            <span class="tag">block</span> <span class="comment">/* Logical block axis */</span><br>
+            <span class="tag">inline</span> <span class="comment">/* Logical inline axis */</span><br>
+            <span class="tag">both</span> <span class="comment">/* Both axes */</span><br>
+            <br>
+            <span class="comment">/* scroll-snap-align Values */</span><br>
+            <span class="tag">none</span> <span class="comment">/* Default */</span><br>
+            <span class="tag">start</span> <span class="comment">/* Snap to start edge */</span><br>
+            <span class="tag">end</span> <span class="comment">/* Snap to end edge */</span><br>
+            <span class="tag">center</span> <span class="comment">/* Snap to center */</span>
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Mandatory vs Proximity</strong> - Mandatory selalu snap, proximity hanya saat dekat<br>
+          • <strong>Axis Options</strong> - Kontrol arah scroll (x, y, block, inline)<br>
+          • <strong>Alignment Points</strong> - start, center, end menentukan posisi snap<br>
+          • <strong>Scroll Behavior</strong> - smooth scroll bisa dikombinasikan
+        </p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>🚀</span>
+        <span>Advanced Table</span>
+      </h2>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>advanced-scroll.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* Custom scroll padding */</span><br>
+            <span class="tag">.scroll-container</span> {<br>
+            &nbsp;&nbsp;<span class="attr">scroll-padding</span>: <span class="string">20px</span>;<br>
+            &nbsp;&nbsp;<span class="attr">scroll-snap-type</span>: <span class="string">y mandatory</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* Force stop on each item */</span><br>
+            <span class="tag">.scroll-item</span> {<br>
+            &nbsp;&nbsp;<span class="attr">scroll-snap-stop</span>: <span class="string">always</span>;<br>
+            &nbsp;&nbsp;<span class="attr">scroll-margin</span>: <span class="string">20px</span>;<br>
+            }<br>
+            <br>
+            <span class="comment">/* Sticky headers with snap */</span><br>
+            <span class="tag">section</span> {<br>
+            &nbsp;&nbsp;<span class="attr">scroll-snap-align</span>: <span class="string">start</span>;<br>
+            }<br>
+            <br>
+            <span class="tag">h2</span> {<br>
+            &nbsp;&nbsp;<span class="attr">position</span>: <span class="string">sticky</span>;<br>
+            &nbsp;&nbsp;<span class="attr">top</span>: <span class="string">0</span>;<br>
+            &nbsp;&nbsp;<span class="attr">background</span>: <span class="string">#9333ea</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="info-box">
+        <h4>ℹ️ Advanced Support</h4>
+        <p>Properti seperti scroll-snap-stop dan scroll-padding memiliki dukungan yang lebih baru (Chrome 75+, Firefox 98+, Safari 15+).</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">
+        <span>💡</span>
+        <span>Pro Tips</span>
+      </h2>
+      
+      <div class="info-box">
+        <h4>🎯 Best Practices</h4>
+        <p>Gunakan scroll-snap dengan bijak untuk meningkatkan UX, bukan sekadar efek. Pastikan konten mudah diakses dengan keyboard dan touch.</p>
+      </div>
+      
+      <div class="code-container">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span>best-practices.css</span>
+        </div>
+        <div class="code-block">
+          <code>
+            <span class="comment">/* ✅ Good - Accessible scroll snap */</span><br>
+            <span class="tag">.scroll-container</span> {<br>
+            &nbsp;&nbsp;<span class="attr">scroll-snap-type</span>: <span class="string">y mandatory</span>;<br>
+            &nbsp;&nbsp;<span class="attr">overflow-y</span>: <span class="string">auto</span>;<br>
+            &nbsp;&nbsp;<span class="attr">scroll-behavior</span>: <span class="string">smooth</span>;<br>
+            }<br>
+            <br>
+            <span class="tag">.scroll-item</span> {<br>
+            &nbsp;&nbsp;<span class="attr">scroll-snap-align</span>: <span class="string">start</span>;<br>
+            &nbsp;&nbsp;<span class="attr">scroll-margin-top</span>: <span class="string">60px</span>; <span class="comment">/* Account for sticky header */</span><br>
+            }<br>
+            <br>
+            <span class="comment">/* ❌ Avoid - Too aggressive snapping */</span><br>
+            <span class="tag">body</span> {<br>
+            &nbsp;&nbsp;<span class="attr">scroll-snap-type</span>: <span class="string">y mandatory</span>;<br>
+            }<br>
+            <br>
+            <span class="tag">*</span> {<br>
+            &nbsp;&nbsp;<span class="attr">scroll-snap-align</span>: <span class="string">start</span>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      
+      <div class="explanation">
+        <p><strong>📝 Penjelasan Detail:</strong></p>
+        <p>
+          • <strong>Gunakan secara selektif</strong> - Hanya untuk komponen yang membutuhkan<br>
+          • <strong>Perhatikan aksesibilitas</strong> - Pastikan navigasi keyboard tetap bekerja<br>
+          • <strong>Kombinasikan dengan smooth scroll</strong> - Untuk pengalaman lebih natural<br>
+          • <strong>Hindari overuse</strong> - Tidak semua halaman perlu scroll snap<br>
+          • <strong>Test di berbagai device</strong> - Perilaku bisa berbeda di touch vs mouse
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
